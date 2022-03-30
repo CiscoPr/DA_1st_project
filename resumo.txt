@@ -1,0 +1,104 @@
+Armazém:
+    ->recebe e mantém mercadorias
+
+Serviços:
+    ->normal
+    ->expresso
+
+Pedidos de transporte:
+    ->tipo de transporte contratado(normal ou expresso)
+    ->peso
+    ->volume
+    ->valor de compensação
+
+Entregas normais (pedidos em maior número e menos urgentes):
+    -> contratação de estafetas
+
+    Estafetas:
+    ->matrícula da viatura
+    ->capacidade de transporte
+        -->volMax
+        -->pesoMax
+    ->custo de transporte
+
+Entregas expresso:
+    ->veículo de capacidade unitária
+        -->transporta um pedido de cada vez
+        -->não depende de volume ou peso
+    ->tempo estimado de entrega(até ao destino final e regresso ao armazém)
+
+Sugestões:
+    ->utilizar bin packing, 0-1 knapsack, job scheduling, etc
+
+Cenários a ser explorados:
+    ->Cenário 1: otimização do número de estafetas:
+        --> Minimizar o número de estafetas para a entrega de todos os pedidos ou do maior número de pedidos, num dia
+        --> Estafetas só realizam uma viagem por dia, mas pode fazer várias entregas em cada dia
+        --> Pedidos que não puderem ser transportados num dia são descartados e retornam ao fornecedor
+        --> E: conjunto de estafetas registados, com capacidade de volume Ve e de peso We;
+        --> P: conjunto de pedidos a entregar, com volume Vp e peso Wp;
+
+    ->Cenário 2: otimização do lucro da empresa:
+        --> Maximizar o lucro da empresa (diferença entre a receita total e o custo total)
+            para a entrega de todos os pedidos ou do maior número de pedidos, num dia, pelos estafetas
+            selecionados
+        --> Estafetas cobram quantia pelo número total de entregas feitas num dia (custo para empresa)
+        --> Por cada entrega, a empresa receba uma receita
+        --> Se não houver capacidade total de transporte suficiente ou despesas superiores a receitas,
+            os pedidos que não puderem ser transportados num dia são descartados
+        --> E: conjunto de estafetas, com  capacidade de volume Ve, peso We e custo Ce;
+        --> P: conjunto de encomendas, com volume Vp, peso Wp e recompensa Rp;
+
+    ->Cenário 3: otimização das entregas expresso:
+        --> Minimizar o tempo médio previsto das entregas expresso a serem realizadas
+           num dia
+        --> Entrega de um único pedido, independentemente do seu volume ou peso
+        --> Pedidos passam a ter a indicação do tempo estimado (tempo para chegar ao destino final mais regressar ao armazém)
+        --> Exclusivas ao horário entre as 9:00 e as 17:00
+        --> Os pedidos que não puderem ser transportados num dia, são descartados e retornam ao fornecedor
+        --> P: conjunto de pedidos expresso, com volume Vp, peso Wp, tempo estimado de entrega Tp
+
+Funcionalidades extra:
+    -> Medir eficiência da empresa (quociente entre o número de pedidos entregues e número de pedidos recebidos)
+    -> Transferir os pdeidos não entregues num dia para o dia seguinte
+    -> Priorizar os pedidos mais antigos
+    -> Outras otimizações (p.ex: equilibrar número de pedidos atribuídos a estafetas)
+    -> Outras restrições (disponibilidade dos estafetas)
+
+Datasets dados:
+    -> carrinhas.txt
+        --> associados aos estafetas
+        --> carga (volMax e pesoMax)
+        --> custo de transporte
+
+    ->encomendas.txt
+        --> associados pedidos de entrega
+        --> volume e peso
+        --> valor pago à empresa pela entrega
+        --> tempo estimado de entrega
+
+
+Estrutura e entrega:
+    -> Código:
+        --> comentado
+
+    -> Apresentação (diapositivos):
+        --> Descrição objetiva e sucinta dos problemas abordados no projeto;
+        --> Formalização dos problemas como problemas de otimização com restrições, com os
+        formalismos apropriados para a indicação dos dados de entrada e resultados, variáveis de
+        decisão, funções-objetivo, restrições, e respetivos domínios de valores para as variáveis;
+        --> Seleção e implementação de estruturas de dados e algoritmos, com a justificação para as
+        escolhas realizadas;
+        --> Análise da complexidade temporal e espacial das soluções implementadas;
+        --> Avaliação empírica (com diferentes tamanhos de input) e discussão;
+        --> Conclusões, incluindo limitações dos algoritmos e oportunidades para melhorias, principais
+        dificuldades encontradas durante o desenvolvimento, e indicação das participações e
+        contribuições dos elementos do grupo.
+
+    -> Demonstração do trabalho:
+        --> Seleção das funcionalidades que melhor representam e realçam os algoritmos
+        implementados e o seu funcionamento;
+        --> Preparação prévia de exemplos adequados que demonstrem o correto funcionamento dos
+        algoritmos, de acordo com as restrições, funções-objetivo, e resultados esperados;
+        --> Introdução prévia de dados a partir da leitura de ficheiros, evitando-se introdução
+        excessiva de dados por linha de comando.
