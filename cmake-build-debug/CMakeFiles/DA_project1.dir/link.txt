@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/DA_project1.dir/main.cpp.o CMakeFiles/DA_project1.dir/FileReader.cpp.o CMakeFiles/DA_project1.dir/Parcell.cpp.o CMakeFiles/DA_project1.dir/Van.cpp.o -o DA_project1 
