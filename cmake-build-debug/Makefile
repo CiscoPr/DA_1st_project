@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/francisco/Downloads/clion-2021.3.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/francisco/Downloads/clion-2021.3.4/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francisco/DA_1st_project
+CMAKE_SOURCE_DIR = /Users/kikoprada/DA_1st_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francisco/DA_1st_project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/kikoprada/DA_1st_project/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/francisco/DA_1st_project/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/francisco/Downloads/clion-2021.3.4/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/francisco/Downloads/clion-2021.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles /home/francisco/DA_1st_project/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles /Users/kikoprada/DA_1st_project/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,30 @@ DA_project1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/build
 .PHONY : DA_project1/fast
 
+Courier.o: Courier.cpp.o
+.PHONY : Courier.o
+
+# target to build an object file
+Courier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Courier.cpp.o
+.PHONY : Courier.cpp.o
+
+Courier.i: Courier.cpp.i
+.PHONY : Courier.i
+
+# target to preprocess a source file
+Courier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Courier.cpp.i
+.PHONY : Courier.cpp.i
+
+Courier.s: Courier.cpp.s
+.PHONY : Courier.s
+
+# target to generate assembly for a file
+Courier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Courier.cpp.s
+.PHONY : Courier.cpp.s
+
 FileReader.o: FileReader.cpp.o
 .PHONY : FileReader.o
 
@@ -153,29 +177,53 @@ FileReader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/FileReader.cpp.s
 .PHONY : FileReader.cpp.s
 
-Parcell.o: Parcell.cpp.o
-.PHONY : Parcell.o
+Menu.o: Menu.cpp.o
+.PHONY : Menu.o
 
 # target to build an object file
-Parcell.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Parcell.cpp.o
-.PHONY : Parcell.cpp.o
+Menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Menu.cpp.o
+.PHONY : Menu.cpp.o
 
-Parcell.i: Parcell.cpp.i
-.PHONY : Parcell.i
+Menu.i: Menu.cpp.i
+.PHONY : Menu.i
 
 # target to preprocess a source file
-Parcell.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Parcell.cpp.i
-.PHONY : Parcell.cpp.i
+Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Menu.cpp.i
+.PHONY : Menu.cpp.i
 
-Parcell.s: Parcell.cpp.s
-.PHONY : Parcell.s
+Menu.s: Menu.cpp.s
+.PHONY : Menu.s
 
 # target to generate assembly for a file
-Parcell.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Parcell.cpp.s
-.PHONY : Parcell.cpp.s
+Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Menu.cpp.s
+.PHONY : Menu.cpp.s
+
+Parcel.o: Parcel.cpp.o
+.PHONY : Parcel.o
+
+# target to build an object file
+Parcel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Parcel.cpp.o
+.PHONY : Parcel.cpp.o
+
+Parcel.i: Parcel.cpp.i
+.PHONY : Parcel.i
+
+# target to preprocess a source file
+Parcel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Parcel.cpp.i
+.PHONY : Parcel.cpp.i
+
+Parcel.s: Parcel.cpp.s
+.PHONY : Parcel.s
+
+# target to generate assembly for a file
+Parcel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Parcel.cpp.s
+.PHONY : Parcel.cpp.s
 
 Van.o: Van.cpp.o
 .PHONY : Van.o
@@ -234,12 +282,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DA_project1"
+	@echo "... Courier.o"
+	@echo "... Courier.i"
+	@echo "... Courier.s"
 	@echo "... FileReader.o"
 	@echo "... FileReader.i"
 	@echo "... FileReader.s"
-	@echo "... Parcell.o"
-	@echo "... Parcell.i"
-	@echo "... Parcell.s"
+	@echo "... Menu.o"
+	@echo "... Menu.i"
+	@echo "... Menu.s"
+	@echo "... Parcel.o"
+	@echo "... Parcel.i"
+	@echo "... Parcel.s"
 	@echo "... Van.o"
 	@echo "... Van.i"
 	@echo "... Van.s"

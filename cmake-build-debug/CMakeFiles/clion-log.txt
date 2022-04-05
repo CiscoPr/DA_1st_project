@@ -1,4 +1,4 @@
-/home/francisco/Downloads/clion-2021.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/francisco/DA_1st_project
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/kikoprada/DA_1st_project
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/francisco/DA_1st_project/cmake-build-debug
+-- Build files have been written to: /Users/kikoprada/DA_1st_project/cmake-build-debug

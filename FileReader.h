@@ -1,12 +1,21 @@
-
 #pragma once
 
 #include <string>
+#include <vector>
+#include <fstream>
+#include <iostream>
+
+#include "Parcel.h"
+#include "Courier.h"
 
 using namespace std;
 
 class FileReader {
-    string name;
+    vector<string> temp;
+
 public:
-    FileReader(const string &name);
+    FileReader();
+    void readFile(const string& txt);
+    void iniParcels(vector<Parcel> *parcels, const string& txt);
+    void iniCouriers(vector<Courier> *couriers, const string& txt);
 };
