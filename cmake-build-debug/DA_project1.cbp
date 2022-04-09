@@ -104,6 +104,12 @@
 		<Unit filename="/Users/kikoprada/DA_1st_project/Parcel.h">
 			<Option target="DA_project1"/>
 		</Unit>
+		<Unit filename="/Users/kikoprada/DA_1st_project/Scenario3.cpp">
+			<Option target="DA_project1"/>
+		</Unit>
+		<Unit filename="/Users/kikoprada/DA_1st_project/Scenario3.h">
+			<Option target="DA_project1"/>
+		</Unit>
 		<Unit filename="/Users/kikoprada/DA_1st_project/Van.cpp">
 			<Option target="DA_project1"/>
 		</Unit>

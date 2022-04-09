@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/DA_project1.dir/Menu.cpp.o.d"
   "CMakeFiles/DA_project1.dir/Parcel.cpp.o"
   "CMakeFiles/DA_project1.dir/Parcel.cpp.o.d"
+  "CMakeFiles/DA_project1.dir/Scenario3.cpp.o"
+  "CMakeFiles/DA_project1.dir/Scenario3.cpp.o.d"
   "CMakeFiles/DA_project1.dir/Van.cpp.o"
   "CMakeFiles/DA_project1.dir/Van.cpp.o.d"
   "CMakeFiles/DA_project1.dir/main.cpp.o"

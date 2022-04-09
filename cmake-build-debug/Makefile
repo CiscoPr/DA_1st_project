@@ -225,6 +225,30 @@ Parcel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Parcel.cpp.s
 .PHONY : Parcel.cpp.s
 
+Scenario3.o: Scenario3.cpp.o
+.PHONY : Scenario3.o
+
+# target to build an object file
+Scenario3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Scenario3.cpp.o
+.PHONY : Scenario3.cpp.o
+
+Scenario3.i: Scenario3.cpp.i
+.PHONY : Scenario3.i
+
+# target to preprocess a source file
+Scenario3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Scenario3.cpp.i
+.PHONY : Scenario3.cpp.i
+
+Scenario3.s: Scenario3.cpp.s
+.PHONY : Scenario3.s
+
+# target to generate assembly for a file
+Scenario3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DA_project1.dir/build.make CMakeFiles/DA_project1.dir/Scenario3.cpp.s
+.PHONY : Scenario3.cpp.s
+
 Van.o: Van.cpp.o
 .PHONY : Van.o
 
@@ -294,6 +318,9 @@ help:
 	@echo "... Parcel.o"
 	@echo "... Parcel.i"
 	@echo "... Parcel.s"
+	@echo "... Scenario3.o"
+	@echo "... Scenario3.i"
+	@echo "... Scenario3.s"
 	@echo "... Van.o"
 	@echo "... Van.i"
 	@echo "... Van.s"

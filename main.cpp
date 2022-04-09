@@ -1,8 +1,8 @@
 
 #include "FileReader.h"
 #include "Menu.h"
-
-int main() {
+#include "Scenario3.h"
+int main() {/*
     vector<Parcel> parcels;
     vector<Courier> couriers;
     FileReader fileReader  = FileReader();
@@ -10,5 +10,8 @@ int main() {
     fileReader.iniCouriers(&couriers, "carrinhas.txt");
     Menu menu = Menu();
     menu.start();
+    */
+    Scenario3 scenario3;
+    scenario3.getDeliveries();
     return 0;
 }
