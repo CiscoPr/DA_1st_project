@@ -8,118 +8,120 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/kikoprada/DA_1st_project/cmake-build-debug"/>
+				<Option working_dir="/home/francisco/DA_1st_project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/kikoprada/DA_1st_project/cmake-build-debug"/>
+				<Option working_dir="/home/francisco/DA_1st_project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/kikoprada/DA_1st_project/cmake-build-debug"/>
+				<Option working_dir="/home/francisco/DA_1st_project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DA_project1">
-				<Option output="/Users/kikoprada/DA_1st_project/cmake-build-debug/DA_project1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/kikoprada/DA_1st_project/cmake-build-debug"/>
+				<Option output="/home/francisco/DA_1st_project/cmake-build-debug/DA_project1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/francisco/DA_1st_project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 DA_project1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 DA_project1"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="DA_project1/fast">
-				<Option output="/Users/kikoprada/DA_1st_project/cmake-build-debug/DA_project1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/kikoprada/DA_1st_project/cmake-build-debug"/>
+				<Option output="/home/francisco/DA_1st_project/cmake-build-debug/DA_project1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/francisco/DA_1st_project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 DA_project1/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kikoprada/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 DA_project1/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/francisco/DA_1st_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Courier.cpp">
+		<Unit filename="/home/francisco/DA_1st_project/Courier.cpp">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Courier.h">
+		<Unit filename="/home/francisco/DA_1st_project/Courier.h">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/FileReader.cpp">
+		<Unit filename="/home/francisco/DA_1st_project/FileReader.cpp">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/FileReader.h">
+		<Unit filename="/home/francisco/DA_1st_project/FileReader.h">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Menu.cpp">
+		<Unit filename="/home/francisco/DA_1st_project/Menu.cpp">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Menu.h">
+		<Unit filename="/home/francisco/DA_1st_project/Menu.h">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Parcel.cpp">
+		<Unit filename="/home/francisco/DA_1st_project/Parcel.cpp">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Parcel.h">
+		<Unit filename="/home/francisco/DA_1st_project/Parcel.h">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Scenario3.cpp">
+		<Unit filename="/home/francisco/DA_1st_project/Scenario3.cpp">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Scenario3.h">
+		<Unit filename="/home/francisco/DA_1st_project/Scenario3.h">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Van.cpp">
+		<Unit filename="/home/francisco/DA_1st_project/Van.cpp">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/Van.h">
+		<Unit filename="/home/francisco/DA_1st_project/Van.h">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/main.cpp">
+		<Unit filename="/home/francisco/DA_1st_project/main.cpp">
 			<Option target="DA_project1"/>
 		</Unit>
-		<Unit filename="/Users/kikoprada/DA_1st_project/CMakeLists.txt">
+		<Unit filename="/home/francisco/DA_1st_project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

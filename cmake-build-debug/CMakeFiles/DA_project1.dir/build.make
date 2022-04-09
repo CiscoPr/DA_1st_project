@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /home/francisco/Downloads/clion-2021.3.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /home/francisco/Downloads/clion-2021.3.4/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kikoprada/DA_1st_project
+CMAKE_SOURCE_DIR = /home/francisco/DA_1st_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kikoprada/DA_1st_project/cmake-build-debug
+CMAKE_BINARY_DIR = /home/francisco/DA_1st_project/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DA_project1.dir/depend.make
@@ -72,100 +72,100 @@ include CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/main.cpp.o: CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/main.cpp.o: ../main.cpp
 CMakeFiles/DA_project1.dir/main.cpp.o: CMakeFiles/DA_project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DA_project1.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/main.cpp.o -MF CMakeFiles/DA_project1.dir/main.cpp.o.d -o CMakeFiles/DA_project1.dir/main.cpp.o -c /Users/kikoprada/DA_1st_project/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DA_project1.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/main.cpp.o -MF CMakeFiles/DA_project1.dir/main.cpp.o.d -o CMakeFiles/DA_project1.dir/main.cpp.o -c /home/francisco/DA_1st_project/main.cpp
 
 CMakeFiles/DA_project1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_project1.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kikoprada/DA_1st_project/main.cpp > CMakeFiles/DA_project1.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francisco/DA_1st_project/main.cpp > CMakeFiles/DA_project1.dir/main.cpp.i
 
 CMakeFiles/DA_project1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_project1.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kikoprada/DA_1st_project/main.cpp -o CMakeFiles/DA_project1.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francisco/DA_1st_project/main.cpp -o CMakeFiles/DA_project1.dir/main.cpp.s
 
 CMakeFiles/DA_project1.dir/FileReader.cpp.o: CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/FileReader.cpp.o: ../FileReader.cpp
 CMakeFiles/DA_project1.dir/FileReader.cpp.o: CMakeFiles/DA_project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DA_project1.dir/FileReader.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/FileReader.cpp.o -MF CMakeFiles/DA_project1.dir/FileReader.cpp.o.d -o CMakeFiles/DA_project1.dir/FileReader.cpp.o -c /Users/kikoprada/DA_1st_project/FileReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DA_project1.dir/FileReader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/FileReader.cpp.o -MF CMakeFiles/DA_project1.dir/FileReader.cpp.o.d -o CMakeFiles/DA_project1.dir/FileReader.cpp.o -c /home/francisco/DA_1st_project/FileReader.cpp
 
 CMakeFiles/DA_project1.dir/FileReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_project1.dir/FileReader.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kikoprada/DA_1st_project/FileReader.cpp > CMakeFiles/DA_project1.dir/FileReader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francisco/DA_1st_project/FileReader.cpp > CMakeFiles/DA_project1.dir/FileReader.cpp.i
 
 CMakeFiles/DA_project1.dir/FileReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_project1.dir/FileReader.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kikoprada/DA_1st_project/FileReader.cpp -o CMakeFiles/DA_project1.dir/FileReader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francisco/DA_1st_project/FileReader.cpp -o CMakeFiles/DA_project1.dir/FileReader.cpp.s
 
 CMakeFiles/DA_project1.dir/Parcel.cpp.o: CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/Parcel.cpp.o: ../Parcel.cpp
 CMakeFiles/DA_project1.dir/Parcel.cpp.o: CMakeFiles/DA_project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DA_project1.dir/Parcel.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Parcel.cpp.o -MF CMakeFiles/DA_project1.dir/Parcel.cpp.o.d -o CMakeFiles/DA_project1.dir/Parcel.cpp.o -c /Users/kikoprada/DA_1st_project/Parcel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DA_project1.dir/Parcel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Parcel.cpp.o -MF CMakeFiles/DA_project1.dir/Parcel.cpp.o.d -o CMakeFiles/DA_project1.dir/Parcel.cpp.o -c /home/francisco/DA_1st_project/Parcel.cpp
 
 CMakeFiles/DA_project1.dir/Parcel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_project1.dir/Parcel.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kikoprada/DA_1st_project/Parcel.cpp > CMakeFiles/DA_project1.dir/Parcel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francisco/DA_1st_project/Parcel.cpp > CMakeFiles/DA_project1.dir/Parcel.cpp.i
 
 CMakeFiles/DA_project1.dir/Parcel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_project1.dir/Parcel.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kikoprada/DA_1st_project/Parcel.cpp -o CMakeFiles/DA_project1.dir/Parcel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francisco/DA_1st_project/Parcel.cpp -o CMakeFiles/DA_project1.dir/Parcel.cpp.s
 
 CMakeFiles/DA_project1.dir/Van.cpp.o: CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/Van.cpp.o: ../Van.cpp
 CMakeFiles/DA_project1.dir/Van.cpp.o: CMakeFiles/DA_project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DA_project1.dir/Van.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Van.cpp.o -MF CMakeFiles/DA_project1.dir/Van.cpp.o.d -o CMakeFiles/DA_project1.dir/Van.cpp.o -c /Users/kikoprada/DA_1st_project/Van.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DA_project1.dir/Van.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Van.cpp.o -MF CMakeFiles/DA_project1.dir/Van.cpp.o.d -o CMakeFiles/DA_project1.dir/Van.cpp.o -c /home/francisco/DA_1st_project/Van.cpp
 
 CMakeFiles/DA_project1.dir/Van.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_project1.dir/Van.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kikoprada/DA_1st_project/Van.cpp > CMakeFiles/DA_project1.dir/Van.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francisco/DA_1st_project/Van.cpp > CMakeFiles/DA_project1.dir/Van.cpp.i
 
 CMakeFiles/DA_project1.dir/Van.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_project1.dir/Van.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kikoprada/DA_1st_project/Van.cpp -o CMakeFiles/DA_project1.dir/Van.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francisco/DA_1st_project/Van.cpp -o CMakeFiles/DA_project1.dir/Van.cpp.s
 
 CMakeFiles/DA_project1.dir/Courier.cpp.o: CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/Courier.cpp.o: ../Courier.cpp
 CMakeFiles/DA_project1.dir/Courier.cpp.o: CMakeFiles/DA_project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DA_project1.dir/Courier.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Courier.cpp.o -MF CMakeFiles/DA_project1.dir/Courier.cpp.o.d -o CMakeFiles/DA_project1.dir/Courier.cpp.o -c /Users/kikoprada/DA_1st_project/Courier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DA_project1.dir/Courier.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Courier.cpp.o -MF CMakeFiles/DA_project1.dir/Courier.cpp.o.d -o CMakeFiles/DA_project1.dir/Courier.cpp.o -c /home/francisco/DA_1st_project/Courier.cpp
 
 CMakeFiles/DA_project1.dir/Courier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_project1.dir/Courier.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kikoprada/DA_1st_project/Courier.cpp > CMakeFiles/DA_project1.dir/Courier.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francisco/DA_1st_project/Courier.cpp > CMakeFiles/DA_project1.dir/Courier.cpp.i
 
 CMakeFiles/DA_project1.dir/Courier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_project1.dir/Courier.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kikoprada/DA_1st_project/Courier.cpp -o CMakeFiles/DA_project1.dir/Courier.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francisco/DA_1st_project/Courier.cpp -o CMakeFiles/DA_project1.dir/Courier.cpp.s
 
 CMakeFiles/DA_project1.dir/Menu.cpp.o: CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/Menu.cpp.o: ../Menu.cpp
 CMakeFiles/DA_project1.dir/Menu.cpp.o: CMakeFiles/DA_project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DA_project1.dir/Menu.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Menu.cpp.o -MF CMakeFiles/DA_project1.dir/Menu.cpp.o.d -o CMakeFiles/DA_project1.dir/Menu.cpp.o -c /Users/kikoprada/DA_1st_project/Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DA_project1.dir/Menu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Menu.cpp.o -MF CMakeFiles/DA_project1.dir/Menu.cpp.o.d -o CMakeFiles/DA_project1.dir/Menu.cpp.o -c /home/francisco/DA_1st_project/Menu.cpp
 
 CMakeFiles/DA_project1.dir/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_project1.dir/Menu.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kikoprada/DA_1st_project/Menu.cpp > CMakeFiles/DA_project1.dir/Menu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francisco/DA_1st_project/Menu.cpp > CMakeFiles/DA_project1.dir/Menu.cpp.i
 
 CMakeFiles/DA_project1.dir/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_project1.dir/Menu.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kikoprada/DA_1st_project/Menu.cpp -o CMakeFiles/DA_project1.dir/Menu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francisco/DA_1st_project/Menu.cpp -o CMakeFiles/DA_project1.dir/Menu.cpp.s
 
 CMakeFiles/DA_project1.dir/Scenario3.cpp.o: CMakeFiles/DA_project1.dir/flags.make
 CMakeFiles/DA_project1.dir/Scenario3.cpp.o: ../Scenario3.cpp
 CMakeFiles/DA_project1.dir/Scenario3.cpp.o: CMakeFiles/DA_project1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DA_project1.dir/Scenario3.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Scenario3.cpp.o -MF CMakeFiles/DA_project1.dir/Scenario3.cpp.o.d -o CMakeFiles/DA_project1.dir/Scenario3.cpp.o -c /Users/kikoprada/DA_1st_project/Scenario3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/DA_project1.dir/Scenario3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DA_project1.dir/Scenario3.cpp.o -MF CMakeFiles/DA_project1.dir/Scenario3.cpp.o.d -o CMakeFiles/DA_project1.dir/Scenario3.cpp.o -c /home/francisco/DA_1st_project/Scenario3.cpp
 
 CMakeFiles/DA_project1.dir/Scenario3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DA_project1.dir/Scenario3.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kikoprada/DA_1st_project/Scenario3.cpp > CMakeFiles/DA_project1.dir/Scenario3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francisco/DA_1st_project/Scenario3.cpp > CMakeFiles/DA_project1.dir/Scenario3.cpp.i
 
 CMakeFiles/DA_project1.dir/Scenario3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DA_project1.dir/Scenario3.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kikoprada/DA_1st_project/Scenario3.cpp -o CMakeFiles/DA_project1.dir/Scenario3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francisco/DA_1st_project/Scenario3.cpp -o CMakeFiles/DA_project1.dir/Scenario3.cpp.s
 
 # Object files for target DA_project1
 DA_project1_OBJECTS = \
@@ -189,7 +189,7 @@ DA_project1: CMakeFiles/DA_project1.dir/Menu.cpp.o
 DA_project1: CMakeFiles/DA_project1.dir/Scenario3.cpp.o
 DA_project1: CMakeFiles/DA_project1.dir/build.make
 DA_project1: CMakeFiles/DA_project1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable DA_project1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable DA_project1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DA_project1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -201,6 +201,6 @@ CMakeFiles/DA_project1.dir/clean:
 .PHONY : CMakeFiles/DA_project1.dir/clean
 
 CMakeFiles/DA_project1.dir/depend:
-	cd /Users/kikoprada/DA_1st_project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kikoprada/DA_1st_project /Users/kikoprada/DA_1st_project /Users/kikoprada/DA_1st_project/cmake-build-debug /Users/kikoprada/DA_1st_project/cmake-build-debug /Users/kikoprada/DA_1st_project/cmake-build-debug/CMakeFiles/DA_project1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/francisco/DA_1st_project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francisco/DA_1st_project /home/francisco/DA_1st_project /home/francisco/DA_1st_project/cmake-build-debug /home/francisco/DA_1st_project/cmake-build-debug /home/francisco/DA_1st_project/cmake-build-debug/CMakeFiles/DA_project1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/DA_project1.dir/depend
 
