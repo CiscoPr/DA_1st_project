@@ -9,6 +9,10 @@
 Scenario3::Scenario3(){}
 
 
+/* this function gets all the possible expresso deliveries
+ * aka, all the deliveries with less then 480 minutes (8h) of duration
+ * in the form of a list
+ * */
 
 std::list<std::pair<int, int>> Scenario3::getDeliveries() {
      std::list<std::pair<int, int>> deliveries_list;
@@ -36,3 +40,5 @@ std::list<std::pair<int, int>> Scenario3::getDeliveries() {
      std::cout << "There are " << number_of_deliveries << " of possible expresso delieveries in total!";
      return deliveries_list;
 }
+
+
