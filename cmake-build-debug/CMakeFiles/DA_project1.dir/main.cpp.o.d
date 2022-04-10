@@ -158,4 +158,7 @@ CMakeFiles/DA_project1.dir/main.cpp.o: \
  /home/francisco/DA_1st_project/Parcel.h \
  /home/francisco/DA_1st_project/Courier.h \
  /home/francisco/DA_1st_project/Menu.h /usr/include/c++/9/limits \
- /home/francisco/DA_1st_project/Scenario3.h
+ /home/francisco/DA_1st_project/Scenario3.h /usr/include/c++/9/list \
+ /usr/include/c++/9/bits/stl_list.h \
+ /usr/include/c++/9/bits/allocated_ptr.h \
+ /usr/include/c++/9/ext/aligned_buffer.h /usr/include/c++/9/bits/list.tcc
