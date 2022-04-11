@@ -13,5 +13,6 @@ int main() {/*
     */
     Scenario3 scenario3;
     scenario3.getDeliveries();
+    scenario3.test();
     return 0;
 }

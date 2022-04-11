@@ -7,13 +7,20 @@
 
 Scenario3::Scenario3(){}
 
+/*this function sets the protected list of
+ * pointers as the result of the possible
+ * timers, given by the second function
+ * */
+
+
+void Scenario3::setTimers(std::list<int> timers) {
+    possible_timers = timers;
+}
 
 /* this function gets all the possible expresso deliveries
  * aka, all the deliveries with less then 480 minutes (8h) of duration
  * in the form of a list
  * */
-
-
 std::list<int> Scenario3::getDeliveries() {
      std::list<int> deliveries_list;
      std::ifstream deliveries;
@@ -34,12 +41,20 @@ std::list<int> Scenario3::getDeliveries() {
          if (std::stoi(duracao) <= 480){
              std::cout << "The " << number_of_deliveries << "th package has " << duracao << " minutes of duration\n";
              deliveries_list.push_back(stoi(duracao));
-
          }
      }
 
      std::cout << "There are " << number_of_deliveries << " of possible expresso delieveries in total!";
+
+     setTimers(deliveries_list);
      return deliveries_list;
 }
 
+/* this function will get all the possible
+ * combinations of deliveries the truck
+ * can do
+ * */
 
+std::vector<std::pair<int, int>> Scenario3::possibleCombination() {
+
+}
