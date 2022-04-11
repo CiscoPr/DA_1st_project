@@ -40,7 +40,7 @@ void FileReader::iniParcels(vector<Parcel> *parcels, const string& txt) {
     }
 }
 
-void FileReader::iniCouriers(vector<Courier> *couriers, const string& txt) {
+void FileReader::iniCouriers(vector<Van> *vans, const string& txt) {
 
     temp.clear();
     readFile(txt);
@@ -48,14 +48,14 @@ void FileReader::iniCouriers(vector<Courier> *couriers, const string& txt) {
     for (const string& line : temp) {
 
         size_t pos1 = line.find(' ');
-        int mVol = stoi(line.substr(0, pos1));
+        int maxVol = stoi(line.substr(0, pos1));
 
         size_t pos2 = line.find(' ', pos1 + 1);
-        int mWgt = stoi(line.substr(pos1 + 1, pos2));
+        int maxWeight = stoi(line.substr(pos1 + 1, pos2));
 
         int cost = stoi(line.substr(pos2 + 1, line.length()));
 
-        Courier courier = Courier(mVol, mWgt, cost);
-        couriers->push_back(courier);
+        Van van = Van(maxVol, maxWeight, cost);
+        vans->push_back(van);
     }
 }

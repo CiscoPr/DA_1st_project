@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\35191\DA_1st_project
+CMAKE_SOURCE_DIR = C:\Users\sauro\CLionProjects\DA_1st_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\35191\DA_1st_project\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\sauro\CLionProjects\DA_1st_project\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\35191\DA_1st_project\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\35191\DA_1st_project\cmake-build-debug\CMakeFiles C:\Users\35191\DA_1st_project\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sauro\CLionProjects\DA_1st_project\cmake-build-debug\CMakeFiles C:\Users\sauro\CLionProjects\DA_1st_project\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\35191\DA_1st_project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sauro\CLionProjects\DA_1st_project\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,30 +127,6 @@ DA_project1: cmake_check_build_system
 DA_project1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/build
 .PHONY : DA_project1/fast
-
-Courier.obj: Courier.cpp.obj
-.PHONY : Courier.obj
-
-# target to build an object file
-Courier.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/Courier.cpp.obj
-.PHONY : Courier.cpp.obj
-
-Courier.i: Courier.cpp.i
-.PHONY : Courier.i
-
-# target to preprocess a source file
-Courier.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/Courier.cpp.i
-.PHONY : Courier.cpp.i
-
-Courier.s: Courier.cpp.s
-.PHONY : Courier.s
-
-# target to generate assembly for a file
-Courier.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/Courier.cpp.s
-.PHONY : Courier.cpp.s
 
 FileReader.obj: FileReader.cpp.obj
 .PHONY : FileReader.obj
@@ -305,9 +281,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... DA_project1
-	@echo ... Courier.obj
-	@echo ... Courier.i
-	@echo ... Courier.s
 	@echo ... FileReader.obj
 	@echo ... FileReader.i
 	@echo ... FileReader.s

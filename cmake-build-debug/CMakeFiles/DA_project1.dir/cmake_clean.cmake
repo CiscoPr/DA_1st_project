@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/DA_project1.dir/Courier.cpp.obj"
-  "CMakeFiles/DA_project1.dir/Courier.cpp.obj.d"
   "CMakeFiles/DA_project1.dir/FileReader.cpp.obj"
   "CMakeFiles/DA_project1.dir/FileReader.cpp.obj.d"
   "CMakeFiles/DA_project1.dir/Menu.cpp.obj"

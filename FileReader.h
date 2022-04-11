@@ -5,8 +5,9 @@
 #include <fstream>
 #include <iostream>
 #include <climits>
+
 #include "Parcel.h"
-#include "Courier.h"
+#include "Van.h"
 
 using namespace std;
 
@@ -17,5 +18,5 @@ public:
     FileReader();
     void readFile(const string& txt);
     void iniParcels(vector<Parcel> *parcels, const string& txt);
-    void iniCouriers(vector<Courier> *couriers, const string& txt);
+    void iniCouriers(vector<Van> *vans, const string& txt);
 };
