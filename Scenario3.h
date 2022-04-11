@@ -6,10 +6,12 @@
 class Scenario3{
 protected:
     std::list<int> possible_timers;
+    std::list<std::list<int>> possible_combinations;
 public:
     Scenario3();
     void setTimers(std::list<int> timers);
+    void setCombinations(std::list<std::list<int>> combinations);
     std::list<int> getDeliveries();
-    std::vector<std::pair<int, int>> possibleCombination();
+    std::list<std::list<int>> possibleCombinations();
     int test();
 };

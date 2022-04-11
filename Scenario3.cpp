@@ -11,11 +11,19 @@ Scenario3::Scenario3(){}
  * pointers as the result of the possible
  * timers, given by the second function
  * */
-
-
 void Scenario3::setTimers(std::list<int> timers) {
     possible_timers = timers;
 }
+
+
+/*this function sets the protected list of lists
+ * of all the possible combinations of
+ * deliveries
+ * */
+void Scenario3::setCombinations(std::list<std::list<int>> combinations) {
+    possible_combinations = combinations;
+}
+
 
 /* this function gets all the possible expresso deliveries
  * aka, all the deliveries with less then 480 minutes (8h) of duration
@@ -50,11 +58,19 @@ std::list<int> Scenario3::getDeliveries() {
      return deliveries_list;
 }
 
+
+
 /* this function will get all the possible
  * combinations of deliveries the truck
  * can do
  * */
+std::list<std::list<int>> Scenario3::possibleCombinations(){
+    std::list<int> combination;
+    std::list<std::list<int>> combination_of_combinations;
+    std::list<int>::iterator i,j;
+    int sum_time = 0, mean_time, minimum_time, max_time = 480;
 
-std::vector<std::pair<int, int>> Scenario3::possibleCombination() {
+
+
 
 }
