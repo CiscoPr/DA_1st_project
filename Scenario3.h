@@ -7,7 +7,6 @@ class Scenario3{
     int duration;
 public:
     Scenario3();
-    std::list<std::pair<int, int>> getDeliveries();
-    int getTime();
-    int meanTime();
+    std::list<int> getDeliveries();
+    std::vector<std::pair<int, int>> possibleCombination();
 };

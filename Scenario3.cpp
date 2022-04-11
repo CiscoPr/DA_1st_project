@@ -5,7 +5,6 @@
 
 
 
-
 Scenario3::Scenario3(){}
 
 
@@ -14,8 +13,9 @@ Scenario3::Scenario3(){}
  * in the form of a list
  * */
 
-std::list<std::pair<int, int>> Scenario3::getDeliveries() {
-     std::list<std::pair<int, int>> deliveries_list;
+
+std::list<int> Scenario3::getDeliveries() {
+     std::list<int> deliveries_list;
      std::ifstream deliveries;
      int number_of_deliveries = 0;                                                                      //number of lines from the dataset
      std::string first_line, data;                              //encomendas.txt - 1
@@ -33,7 +33,8 @@ std::list<std::pair<int, int>> Scenario3::getDeliveries() {
          getline(deliveries, duracao);
          if (std::stoi(duracao) <= 480){
              std::cout << "The " << number_of_deliveries << "th package has " << duracao << " minutes of duration\n";
-             deliveries_list.push_back(std::make_pair(number_of_deliveries, stoi(duracao)));
+             deliveries_list.push_back(stoi(duracao));
+
          }
      }
 

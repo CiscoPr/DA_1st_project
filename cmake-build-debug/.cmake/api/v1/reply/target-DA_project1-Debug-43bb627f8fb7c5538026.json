@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "DA_project1"
+			"path" : "DA_project1.exe"
+		},
+		{
+			"path" : "DA_project1.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -74,12 +77,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "DA_project1",
-	"nameOnDisk" : "DA_project1",
+	"nameOnDisk" : "DA_project1.exe",
 	"paths" : 
 	{
 		"build" : ".",
