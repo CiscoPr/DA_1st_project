@@ -32,12 +32,13 @@ void Scenario3::setCombinations(std::list<std::list<float>> combinations) {
 std::list<int> Scenario3::getDeliveries() {
      std::list<int> deliveries_list;
      std::ifstream deliveries;
+     int max_time = 480*60;
      int number_of_deliveries = 0;                                                                      //number of lines from the dataset
      std::string first_line, data;                              //encomendas.txt - 1
      deliveries.open("../res/encomendas.txt");                                                  //open the file
      getline(deliveries, first_line);
      while(!deliveries.eof()) {
-         number_of_deliveries++;
+
          std::string volume;
          getline(deliveries, volume, ' ');
          std::string peso;
@@ -46,13 +47,14 @@ std::list<int> Scenario3::getDeliveries() {
          getline(deliveries, recompensa, ' ');
          std::string duracao;
          getline(deliveries, duracao);
-         if (std::stoi(duracao) <= 480){
-             std::cout << "The " << number_of_deliveries << "th package has " << duracao << " minutes of duration\n";
+         if (std::stoi(duracao) <= max_time){
+             number_of_deliveries++;
+             //std::cout << "The " << number_of_deliveries << "th package has " << duracao << " seconds of duration\n";
              deliveries_list.push_back(stoi(duracao));
          }
      }
 
-     std::cout << "There are " << number_of_deliveries << " of possible expresso delieveries in total!\n";
+     //std::cout << "There are " << number_of_deliveries << " of possible express deliveries in total!\n";
 
      setTimers(deliveries_list);
      return deliveries_list;
@@ -69,7 +71,8 @@ std::list<std::list<float>> Scenario3::possibleCombinations(){
     std::list<float> combination;
     std::list<std::list<float>> combination_of_combinations;
     std::list<int>::iterator i,j;
-    int sum_time = 0, counter, max_time = 480;
+    int sum_time = 0, counter;
+    int max_time = 480*60;
     float mean_time;
     while(!copy_of_timers.empty()){
         counter = 1;
@@ -92,9 +95,9 @@ std::list<std::list<float>> Scenario3::possibleCombinations(){
     }
     for(auto it: combination_of_combinations){
         for(auto it2: it){
-            std::cout << it2 << " ";
+            //std::cout << it2 << " ";
         }
-        std::cout << "\n";
+        //std::cout << "\n";
 
     }
     setCombinations(combination_of_combinations);
@@ -106,20 +109,22 @@ std::list<float> Scenario3::result(){
 
     std::list<float> final_result;
     float minimum_mean = INT_MAX;
+    float maximum_size = 0;
     for(auto it: possible_combinations_list){
-        if(it.back() <= minimum_mean){
+        if(it.back() <= minimum_mean && it.size() >= maximum_size){
             minimum_mean = it.back();
+            maximum_size = it.size();
             final_result = it;
         }
     }
-    std::cout << "The best possible scenario here is if the expresso truck delivers: \n";
+    std::cout << "The best possible scenario here is if the express truck delivers: \n";
     int counter = 1;
     final_result.pop_back();
     for(auto it2: final_result){
-        std::cout << "- The " << counter << "th deliver is the one with " << it2 << " minutes of duration\n";
+        std::cout << "- The " << counter << "th deliver is the one with " << it2 << " seconds of duration\n";
         counter++;
     }
-    std::cout << "The mean time of this order is of " << minimum_mean << " minutes, which is the minimum possible!\n";
+    std::cout << "The mean time of this order is of " << minimum_mean << " seconds, which is the minimum possible!\n";
     return final_result;
 
 };
