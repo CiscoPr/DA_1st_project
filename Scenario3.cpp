@@ -20,8 +20,8 @@ void Scenario3::setTimers(std::list<int> timers) {
  * of all the possible combinations of
  * deliveries
  * */
-void Scenario3::setCombinations(std::list<std::list<int>> combinations) {
-    possible_combinations = combinations;
+void Scenario3::setCombinations(std::list<std::list<float>> combinations) {
+    possible_combinations_list = combinations;
 }
 
 
@@ -64,13 +64,59 @@ std::list<int> Scenario3::getDeliveries() {
  * combinations of deliveries the truck
  * can do
  * */
-std::list<std::list<int>> Scenario3::possibleCombinations(){
-    std::list<int> combination;
-    std::list<std::list<int>> combination_of_combinations;
+std::list<std::list<float>> Scenario3::possibleCombinations(){
+    std::list<int> copy_of_timers = possible_timers;
+    std::list<float> combination;
+    std::list<std::list<float>> combination_of_combinations;
     std::list<int>::iterator i,j;
-    int sum_time = 0, mean_time, minimum_time, max_time = 480;
+    int sum_time = 0, counter, max_time = 480;
+    float mean_time;
+    while(!copy_of_timers.empty()){
+        counter = 1;
+        combination.clear();
+        int item1 = copy_of_timers.front();
+        combination.push_back(item1);
+        copy_of_timers.pop_front();
+        sum_time += item1;
+        for(auto it2: copy_of_timers){
+            if(sum_time + it2 <= max_time){
+                sum_time += it2;
+                counter ++;
+                combination.push_back(it2);
+            }
+        }
+        mean_time = (float) sum_time/ (float) counter;
+        combination.push_back(mean_time);
+        sum_time =0;
+        combination_of_combinations.push_back(combination);
+    }
+    for(auto it: combination_of_combinations){
+        for(auto it2: it){
+            std::cout << it2 << " ";
+        }
+        std::cout << "\n";
 
-
-
-
+    }
+    setCombinations(combination_of_combinations);
+    return combination_of_combinations;
 }
+
+
+std::list<float> Scenario3::result(){
+    std::list<float> final_result;
+    int counter = 0;
+    for(auto it: possible_combinations_list){
+        float minimum_mean = INT_MAX;
+        if(it.back() <= minimum_mean){
+            minimum_mean = it.back();
+            final_result = it;
+        }
+    }
+    for(auto it2: final_result){
+        counter ++;
+        std::cout << "The " << counter << "th delivery" << " has a delivery time of " << it2 << " minutes\n";
+    }
+    std::cout << "The best expresso delivery option, in this case, is the delivering these " << counter << " deliveries, which have " << final_result.back() << " minutes of mean delivery time";
+    return final_result;
+
+};

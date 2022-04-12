@@ -18,7 +18,8 @@ int main() {/*
     Scenario3 scenario3;
     start = std::chrono::high_resolution_clock::now();
     scenario3.getDeliveries();
-    //scenario3.possibleCombination();
+    scenario3.possibleCombinations();
+    scenario3.result();
     end = std::chrono::high_resolution_clock::now();
 
     std::cout << '\n' << "total of " << std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count() << " elapsed miliseconds";
