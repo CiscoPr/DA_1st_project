@@ -30,34 +30,34 @@ void Scenario3::setCombinations(std::list<std::list<float>> combinations) {
  * in the form of a list
  * */
 std::list<int> Scenario3::getDeliveries() {
-     std::list<int> deliveries_list;
-     std::ifstream deliveries;
-     int max_time = 480*60;
-     int number_of_deliveries = 0;                                                                      //number of lines from the dataset
-     std::string first_line, data;                              //encomendas.txt - 1
-     deliveries.open("../res/encomendas.txt");                                                  //open the file
-     getline(deliveries, first_line);
-     while(!deliveries.eof()) {
+    std::list<int> deliveries_list;
+    std::ifstream deliveries;
+    int max_time = 480*60;
+    int number_of_deliveries = 0;                                                                      //number of lines from the dataset
+    std::string first_line, data;                              //encomendas.txt - 1
+    deliveries.open("../res/encomendas.txt");                                                  //open the file
+    getline(deliveries, first_line);
+    while(!deliveries.eof()) {
 
-         std::string volume;
-         getline(deliveries, volume, ' ');
-         std::string peso;
-         getline(deliveries, peso, ' ');
-         std::string recompensa;
-         getline(deliveries, recompensa, ' ');
-         std::string duracao;
-         getline(deliveries, duracao);
-         if (std::stoi(duracao) <= max_time){
-             number_of_deliveries++;
-             //std::cout << "The " << number_of_deliveries << "th package has " << duracao << " seconds of duration\n";
-             deliveries_list.push_back(stoi(duracao));
-         }
-     }
+        std::string volume;
+        getline(deliveries, volume, ' ');
+        std::string peso;
+        getline(deliveries, peso, ' ');
+        std::string recompensa;
+        getline(deliveries, recompensa, ' ');
+        std::string duracao;
+        getline(deliveries, duracao);
+        if (std::stoi(duracao) <= max_time){
+            number_of_deliveries++;
+            //std::cout << "The " << number_of_deliveries << "th package has " << duracao << " seconds of duration\n";
+            deliveries_list.push_back(stoi(duracao));
+        }
+    }
 
-     //std::cout << "There are " << number_of_deliveries << " of possible express deliveries in total!\n";
+    //std::cout << "There are " << number_of_deliveries << " of possible express deliveries in total!\n";
 
-     setTimers(deliveries_list);
-     return deliveries_list;
+    setTimers(deliveries_list);
+    return deliveries_list;
 }
 
 
@@ -106,14 +106,14 @@ std::list<std::list<float>> Scenario3::possibleCombinations(){
 }
 
 
-std::list<float> Scenario3::result(){
+std::list<float> Scenario3::result() {
 
     std::list<float> final_result;
     float minimum_mean = INT_MAX;
     float maximum_size = 0;
     int timer = 0;
-    for(auto it: possible_combinations_list){
-        if(it.back() <= minimum_mean && it.size() >= maximum_size){
+    for (auto it: possible_combinations_list) {
+        if (it.back() <= minimum_mean && it.size() >= maximum_size) {
             minimum_mean = it.back();
             maximum_size = it.size();
             final_result = it;
@@ -122,15 +122,16 @@ std::list<float> Scenario3::result(){
     std::cout << "The best possible scenario here is if the express truck delivers: \n";
     int counter = 1;
     final_result.pop_back();
-    for(auto it2: final_result){
+    for (auto it2: final_result) {
         std::cout << "- The " << counter << "th deliver is the one with " << it2 << " seconds of duration\n";
         counter++;
-        timer+=it2;
+        timer += it2;
     }
     /*float minutes = ((float) timer / 60);
     float hours = minutes / 60;
      */
-    std::cout << "The total minimum time is " << timer << " seconds, which correspond to " << (float)timer/60 <<" minutes or " << (float)timer/60/60 << " hours.\n";
+    std::cout << "The total minimum time is " << timer << " seconds, which correspond to " << (float) timer / 60
+              << " minutes or " << (float) timer / 60 / 60 << " hours.\n";
 
     std::cout << "The mean time of this order is of " << minimum_mean << " seconds.\n";
     return final_result;
