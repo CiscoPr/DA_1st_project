@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-
+#include <cmath>
 
 
 Scenario3::Scenario3(){}
@@ -72,7 +72,7 @@ std::list<std::list<float>> Scenario3::possibleCombinations(){
     std::list<std::list<float>> combination_of_combinations;
     std::list<int>::iterator i,j;
     int sum_time = 0, counter;
-    int max_time = 480*60;
+    int max_time = 480* 60;
     float mean_time;
     while(!copy_of_timers.empty()){
         counter = 1;
@@ -87,6 +87,7 @@ std::list<std::list<float>> Scenario3::possibleCombinations(){
                 counter ++;
                 combination.push_back(it2);
             }
+
         }
         mean_time = (float) sum_time/ (float) counter;
         combination.push_back(mean_time);
@@ -110,6 +111,7 @@ std::list<float> Scenario3::result(){
     std::list<float> final_result;
     float minimum_mean = INT_MAX;
     float maximum_size = 0;
+    int timer = 0;
     for(auto it: possible_combinations_list){
         if(it.back() <= minimum_mean && it.size() >= maximum_size){
             minimum_mean = it.back();
@@ -123,8 +125,14 @@ std::list<float> Scenario3::result(){
     for(auto it2: final_result){
         std::cout << "- The " << counter << "th deliver is the one with " << it2 << " seconds of duration\n";
         counter++;
+        timer+=it2;
     }
-    std::cout << "The mean time of this order is of " << minimum_mean << " seconds, which is the minimum possible!\n";
+    /*float minutes = ((float) timer / 60);
+    float hours = minutes / 60;
+     */
+    std::cout << "The total minimum time is " << timer << " seconds, which correspond to " << (float)timer/60 <<" minutes or " << (float)timer/60/60 << " hours.\n";
+
+    std::cout << "The mean time of this order is of " << minimum_mean << " seconds.\n";
     return final_result;
 
 };
