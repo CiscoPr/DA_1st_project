@@ -1,5 +1,9 @@
 #pragma once
 
+#include <iostream>
+
+using namespace std;
+
 class Parcel {
     int vol, weight, cost, duration;
 public:
@@ -7,17 +11,12 @@ public:
 
     int getVol() const;
 
-    void setVol(int vol);
-
     int getWeight() const;
-
-    void setWeight(int weight);
 
     int getCost() const;
 
-    void setCost(int cost);
-
     int getDuration() const;
 
-    void setDuration(int duration);
+    bool operator<(const Parcel& parcel) const;
+    bool operator==(const Parcel& parcel) const;
 };

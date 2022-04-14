@@ -6,19 +6,17 @@ Van::Van(int maxVol, int maxWeight, int cost) : maxVol(maxVol), maxWeight(maxWei
 
 int Van::getMaxVol() const {return maxVol;}
 
-void Van::setMaxVol(int maxVol) {Van::maxVol = maxVol;}
-
 int Van::getMaxWeight() const {return maxWeight;}
-
-void Van::setMaxWeight(int maxWeight) {Van::maxWeight = maxWeight;}
 
 int Van::getCost() const {return cost;}
 
-void Van::setCost(int cost) {Van::cost = cost;}
+stack<Parcel> Van::getOccupied() {return occupied;}
 
-bool Van::checkVol(int vol) { return maxVol > vol;}
+int Van::getProfit() const {return profit;}
 
-bool Van::checkWeight(int weight) { return maxWeight > weight;}
+bool Van::checkVol(int vol) const { return maxVol > vol;}
+
+bool Van::checkWeight(int weight) const { return maxWeight > weight;}
 
 void Van::occupySpace(Parcel& parcel) {
     maxVol -= parcel.getVol();
@@ -27,18 +25,11 @@ void Van::occupySpace(Parcel& parcel) {
     profit += parcel.getCost();
 }
 
-stack<Parcel> Van::getOccupied() {
-    return occupied;
+bool Van::operator<(const Van &van) const {
+    return maxVol * maxWeight / cost > van.maxVol * van.maxWeight / van.cost;
 }
 
-void Van::setOccupied(const stack<Parcel> &occupied) {
-    Van::occupied = occupied;
-}
-
-int Van::getProfit() const {
-    return profit;
-}
-
-void Van::setProfit(int profit) {
-    Van::profit = profit;
+ostream& operator<<(ostream& out, Van& v1) {
+    out << v1.getMaxVol() << " " << v1.getMaxWeight() << " " << v1.getCost() << " " << v1.getProfit() << endl;
+    return out;
 }

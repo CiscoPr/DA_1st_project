@@ -17,8 +17,10 @@ class Scenario2 {
     set<Van> used;
 
 public:
-    Scenario2(const vector<Van> &vans, const vector<Parcel> &parcels);
+    Scenario2( vector<Van> &vans, vector<Parcel> &parcels);
     void start();
     void checkBalance();
-    void show();
+    void show() const;
+
+    bool checkVan(Van& v, Parcel& p);
 };

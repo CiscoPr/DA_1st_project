@@ -1,30 +1,26 @@
 #include "Scenario2.h"
 
-Scenario2::Scenario2(const vector<Van> &vans, const vector<Parcel> &parcels) : vans(vans), parcels(parcels) {
+Scenario2::Scenario2( vector<Van> &vans, vector<Parcel> &parcels) : vans(vans), parcels(parcels) {
     balance = 0;
 }
 
 void Scenario2::start() {
-    vector<Parcel> copy_p(parcels);
-    vector<Van> copy_v(vans);
 
-    delivered.clear();
-    used.clear();
+    sort(parcels.begin(), parcels.end());
+    sort(vans.begin(), vans.end());
 
-    sort(copy_p.begin(), copy_p.end(), [] (const Parcel& p1, const Parcel& p2) {
-        return p1.getCost() > p2.getCost();
-    });
-
-    sort(copy_v.begin(), copy_v.end(), [] (const Van& v1, const Van& v2) {
-        return v1.getMaxVol() + v1.getMaxWeight() / v1.getCost() > v2.getMaxVol() + v2.getMaxWeight() / v2.getCost();
-    });
-
-    auto v1 = copy_v.begin();
-    auto p1 = copy_p.begin();
-
-    while (p1 != copy_p.end()) {
-        if (v1 == copy_v.end()) break;
-        /*if (used.insert(*v1).second) balance -= v1->getCost();
+    while (!parcels.empty() && !vans.empty()) {
+        if (used.insert(vans[0]).second) balance -= vans[0].getCost();
+        if (!checkVan(vans[0], parcels[0])) {
+            for (auto it = parcels.begin(); it != parcels.end(); it++) {
+                if (checkVan(vans[0], *it)) it = parcels.begin();
+            }
+            vans.erase(vans.begin());
+        }
+    }
+    /*while (p1 != parcels.end()) {
+        if (v1 == vans.end()) break;
+        if (used.insert(*v1).second) balance -= v1->getCost();
         if (v1->checkVol(p1->getVol()) && v1->checkWeight(p1->getWeight())) {
             if (delivered.insert(*p1).second) {
                 v1->occupySpace(*p1);
@@ -33,22 +29,18 @@ void Scenario2::start() {
             p1++;
         }
         else {
-            bool tmp = false;
-            while (!tmp) {
-                for (auto it = p1; it != copy_p.end(); it++) {
-                    if (v1->checkVol(it->getVol()) && v1->checkWeight(it->getWeight())) {
-                        if (delivered.insert(*it).second) {
-                            v1->occupySpace(*it);
-                            balance += it->getCost();
-                            tmp = true;
-                        }
+            for (auto it = copy_p.begin(); it != copy_p.end(); it++) {
+                if (v1->checkVol(it->getVol()) && v1->checkWeight(it->getWeight())) {
+                    if (delivered.insert(*it).second) {
+                        v1->occupySpace(*it);
+                        balance += it->getCost();
+                        it = copy_p.begin();
                     }
                 }
-                if (tmp) tmp = false;
             }
             v1++;
-        }*/
-    }
+        }
+    }*/
     checkBalance();
 }
 
@@ -57,7 +49,7 @@ void Scenario2::checkBalance() {
 
     if (balance >= 0) return;
 
-    for (auto x : used) temp.push_back(x);
+    for (const auto& x : used) temp.push_back(x);
     sort(temp.begin(), temp.end(), [] (const Van& v1, const Van& v2) {
         return v1.getProfit() < v2.getProfit();
     });
@@ -72,6 +64,17 @@ void Scenario2::checkBalance() {
     }
 }
 
-void Scenario2::show() {
-    cout << balance << endl;
+bool Scenario2::checkVan(Van& van, Parcel& parcel) {
+    if (van.checkVol(parcel.getVol()) && van.checkWeight(parcel.getWeight())) {
+        delivered.insert(parcel);
+        van.occupySpace(parcel);
+        balance += parcel.getCost();
+        parcels.erase(find(parcels.begin(), parcels.end(), parcel));
+        return true;
+    }
+    return false;
+}
+
+void Scenario2::show() const {
+    cout << "The profit the company made was: " << balance << "€" << endl;
 }
