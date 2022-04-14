@@ -1,10 +1,7 @@
-//
-// Created by ricar on 13/04/2022.
-//
-
 #include <fstream>
 #include <vector>
 #include "Scenario1.h"
+#include "FileReader.h"
 
 Scenario1::Scenario1() {}
 
@@ -15,15 +12,12 @@ Scenario1::Scenario1() {}
  * each van's maximum weight, volume and cost.
  * */
 
-std::list<Van> Scenario1::getVans() {
-    std::ifstream file;
+void Scenario1::getVans() {
+    ifstream file;
+    FileReader reader;
     file.open("../res/carrinhas.txt");
-    Van temp = Van(0, 0, 0);
-    file.read((char*)&temp, sizeof(temp));
-
-    while(!file.eof()){
-        temp.setMaxVol()
-    }
+    reader.iniCouriers(vans,file);
+    file.close();
 }
 
 
@@ -37,8 +31,12 @@ std::list<Van> Scenario1::getVans() {
  * the package.
  */
 
-std::list<Courier> Scenario1::getDels(){
-
+void Scenario1::getDels(){
+    ifstream file;
+    FileReader reader;
+    file.open("../res/encomendas.txt");
+    reader.iniParcels(dels,file);
+    file.close();
 }
 
 /*
@@ -52,6 +50,8 @@ std::list<Courier> Scenario1::getDels(){
 
 std::list<Van> Scenario1::minOfVans() {
 
+    getVans();
+    getDels();
     std::list<Van> availableVans;
 
     for(std::list<Van>::iterator itr1 = vans.begin() ; itr1 != vans.end() ; itr1++) {

@@ -1,7 +1,3 @@
-//
-// Created by ricar on 13/04/2022.
-//
-
 #ifndef DA_PROJECT1_SCENARIO1_H
 #define DA_PROJECT1_SCENARIO1_H
 
@@ -16,10 +12,9 @@ protected:
     std::list<Courier> dels;
 public:
     Scenario1();
-    std::list<Van> getVans();
-    std::list<Courier> getDels();
+    void getVans();
+    void getDels();
     std::list<Van> minOfVans();
-
 };
 
 

@@ -1,8 +1,10 @@
-
 #include "FileReader.h"
 #include "Menu.h"
 #include "Scenario3.h"
+#include "Scenario1.h"
 #include <chrono>
+#include <iostream>
+
 int main() {/*
     vector<Parcel> parcels;
     vector<Courier> couriers;
@@ -13,17 +15,24 @@ int main() {/*
     menu.start();
     */
 
-    std::chrono::high_resolution_clock::time_point start, end;
+    /*std::chrono::high_resolution_clock::time_point start, end;
 
     Scenario3 scenario3;
     start = std::chrono::high_resolution_clock::now();
     scenario3.getMeanTime();
-    end = std::chrono::high_resolution_clock::now();
+    end = std::chrono::high_resolution_clock::now();*/
 
-    std::cout << '\n' << "total of " << std::chrono::duration_cast<std::chrono::nanoseconds>(end-start).count() << " elapsed nanoseconds";
+    /*std::cout << '\n' << "total of " << std::chrono::duration_cast<std::chrono::nanoseconds>(end-start).count() << " elapsed nanoseconds";*/
     /*
      * antes: 70106800 ns
      * depois:11013700 ns
      */
+
+    Scenario1 scenario1;
+    std::list<Van> result;
+    result = scenario1.minOfVans();
+    std::cout << "The minimum number of vans needed is " << result.size() << std::endl();
+
     return 0;
+    
 }
