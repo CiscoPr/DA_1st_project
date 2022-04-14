@@ -18,5 +18,5 @@ public:
     FileReader();
     void readFile(const string& txt);
     void iniParcels(vector<Parcel> *parcels, const string& txt);
-    void iniCouriers(vector<Van> *vans, const string& txt);
+    void iniVans(vector<Van> *vans, const string& txt);
 };
