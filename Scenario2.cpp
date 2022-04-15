@@ -12,55 +12,34 @@ void Scenario2::start() {
     while (!parcels.empty() && !vans.empty()) {
         if (used.insert(vans[0]).second) balance -= vans[0].getCost();
         if (!checkVan(vans[0], parcels[0])) {
-            for (auto it = parcels.begin(); it != parcels.end(); it++) {
-                if (checkVan(vans[0], *it)) it = parcels.begin();
-            }
             vans.erase(vans.begin());
         }
     }
-    /*while (p1 != parcels.end()) {
-        if (v1 == vans.end()) break;
-        if (used.insert(*v1).second) balance -= v1->getCost();
-        if (v1->checkVol(p1->getVol()) && v1->checkWeight(p1->getWeight())) {
-            if (delivered.insert(*p1).second) {
-                v1->occupySpace(*p1);
-                balance += p1->getCost();
-            }
-            p1++;
+    for (auto x : used) {
+        for (auto it = parcels.begin(); it != parcels.end(); it++) {
+            if (checkVan(vans[0], *it)) it = parcels.begin();
         }
-        else {
-            for (auto it = copy_p.begin(); it != copy_p.end(); it++) {
-                if (v1->checkVol(it->getVol()) && v1->checkWeight(it->getWeight())) {
-                    if (delivered.insert(*it).second) {
-                        v1->occupySpace(*it);
-                        balance += it->getCost();
-                        it = copy_p.begin();
-                    }
-                }
-            }
-            v1++;
-        }
-    }*/
+    }
     checkBalance();
 }
 
 void Scenario2::checkBalance() {
-    vector<Van> temp;
+    vans.clear();
 
     if (balance >= 0) return;
 
-    for (const auto& x : used) temp.push_back(x);
-    sort(temp.begin(), temp.end(), [] (const Van& v1, const Van& v2) {
+    for (const auto& x : used) vans.push_back(x);
+    sort(vans.begin(), vans.end(), [] (const Van& v1, const Van& v2) {
         return v1.getProfit() < v2.getProfit();
     });
 
     while (balance < 0) {
-        while (!temp[0].getOccupied().empty()) {
-            balance -= temp[0].getOccupied().top().getCost();
-            temp[0].getOccupied().pop();
+        while (!vans[0].getOccupied().empty()) {
+            balance -= vans[0].getOccupied().top().getCost();
+            vans[0].getOccupied().pop();
         }
-        balance += temp[0].getCost();
-        temp.erase(temp.begin());
+        balance += vans[0].getCost();
+        vans.erase(vans.begin());
     }
 }
 
@@ -69,7 +48,7 @@ bool Scenario2::checkVan(Van& van, Parcel& parcel) {
         delivered.insert(parcel);
         van.occupySpace(parcel);
         balance += parcel.getCost();
-        parcels.erase(find(parcels.begin(), parcels.end(), parcel));
+        parcels.erase(parcels.begin());
         return true;
     }
     return false;
