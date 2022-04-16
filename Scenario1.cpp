@@ -1,9 +1,9 @@
 #include <fstream>
-#include <vector>
+#include <utility>
 #include "Scenario1.h"
 #include "FileReader.h"
 
-Scenario1::Scenario1() {}
+Scenario1::Scenario1(std::vector<Van> v, std::vector<Parcel> p) : vans(std::move(v)), dels(std::move(p)) {}
 
 /*
  * This function returns a list with
@@ -16,32 +16,25 @@ Scenario1::Scenario1() {}
 
 void Scenario1::minOfVans() {
 
-    std::list<Van> availableVans;
+    std::vector<Van> availableVans;
 
     for(auto itr1 = vans.begin() ; itr1 != vans.end() ; itr1++) {
 
-        Van carrinha = vans.front();
+        Van carrinha = *itr1;
 
-        for(auto itr2 = dels.begin() ; itr2 != dels.end() ; itr2++) {
+        for(auto itr2 = dels.begin() ; itr2 != dels.end() ; ) {
 
-            Parcel encomenda = dels.front();
+            Parcel encomenda = *itr2;
 
-            if((carrinha.getMaxWeight() - encomenda.getWeight()) > 0 || (carrinha.getMaxVol() - encomenda.getVol()) > 0){
+            if((carrinha.getMaxWeight() - encomenda.getWeight()) > 0 && (carrinha.getMaxVol() - encomenda.getVol()) > 0){
                 carrinha.setMaxWeight(carrinha.getMaxWeight() - encomenda.getWeight());
                 carrinha.setMaxVol(carrinha.getMaxVol() - encomenda.getVol());
                 dels.erase(itr2);
             } else {
-                vans.erase(itr1);
+                itr2++;
+                availableVans.push_back(carrinha);
+                break;
             }
-        }
-        availableVans.push_back(carrinha);
-    }
-
-    if(dels.size() > 0) {
-        for(auto itr3 = dels.begin() ;
-            itr3 != dels.end();
-            itr3++) {
-            dels.erase(itr3);
         }
     }
 

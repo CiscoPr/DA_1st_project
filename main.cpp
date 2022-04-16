@@ -28,7 +28,9 @@ int main() {
      * depois:11013700 ns
      */
 
-    Scenario1 scenario1;
+    Scenario1 scenario1 = Scenario1(couriers,parcels);
+    /*int num = scenario1.minOfVans();
+    std::cout << "The number is " << num << std::endl;*/
     scenario1.minOfVans();
 
     return 0;

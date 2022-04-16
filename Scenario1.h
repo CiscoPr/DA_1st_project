@@ -1,17 +1,15 @@
 #ifndef DA_PROJECT1_SCENARIO1_H
 #define DA_PROJECT1_SCENARIO1_H
 
-#include <list>
+#include <vector>
 #include "Van.h"
-#include "parcel.h"
+#include "Parcel.h"
 
 class Scenario1 {
-
-protected:
-    std::list<Van> vans;
-    std::list<Parcel> dels;
+    std::vector<Van> vans;
+    std::vector<Parcel> dels;
 public:
-    Scenario1();
+    Scenario1(std::vector<Van> v, std::vector<Parcel> p);
     void minOfVans();
 };
 
