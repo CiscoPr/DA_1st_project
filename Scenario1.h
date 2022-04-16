@@ -12,8 +12,6 @@ protected:
     std::list<Courier> dels;
 public:
     Scenario1();
-    void getVans();
-    void getDels();
     std::list<Van> minOfVans();
 };
 

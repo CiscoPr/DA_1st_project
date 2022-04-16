@@ -34,5 +34,5 @@ int main() {/*
     std::cout << "The minimum number of vans needed is " << result.size() << std::endl();
 
     return 0;
-    
+
 }
