@@ -39,7 +39,7 @@ void Scenario1::minOfVans() {
 
     if(dels.size() > 0) {
         for(std::vector<Courier>::iterator itr3 = dels.begin() ;
-            itr3 != dels.end() ;
+            itr3 != dels.end();
             itr3++) {
             dels.erase(itr3);
         }
