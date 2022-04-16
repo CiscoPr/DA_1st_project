@@ -1,6 +1,6 @@
 #include "Scenario2.h"
 
-Scenario2::Scenario2( vector<Van> &vans, vector<Parcel> &parcels) : vans(vans), parcels(parcels) {
+Scenario2::Scenario2( vector<Van> vans, vector<Parcel> parcels) : vans(move(vans)), parcels(move(parcels)) {
     balance = 0;
 }
 
@@ -23,6 +23,17 @@ void Scenario2::start() {
     checkBalance();
 }
 
+bool Scenario2::checkVan(Van& van, Parcel& parcel) {
+    if (van.checkVol(parcel.getVol()) && van.checkWeight(parcel.getWeight())) {
+        delivered.insert(parcel);
+        van.occupySpace(parcel);
+        balance += parcel.getCost();
+        parcels.erase(parcels.begin());
+        return true;
+    }
+    return false;
+}
+
 void Scenario2::checkBalance() {
     vans.clear();
 
@@ -41,17 +52,6 @@ void Scenario2::checkBalance() {
         balance += vans[0].getCost();
         vans.erase(vans.begin());
     }
-}
-
-bool Scenario2::checkVan(Van& van, Parcel& parcel) {
-    if (van.checkVol(parcel.getVol()) && van.checkWeight(parcel.getWeight())) {
-        delivered.insert(parcel);
-        van.occupySpace(parcel);
-        balance += parcel.getCost();
-        parcels.erase(parcels.begin());
-        return true;
-    }
-    return false;
 }
 
 void Scenario2::show() const {

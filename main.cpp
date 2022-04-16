@@ -11,7 +11,7 @@ int main() {
     FileReader fileReader  = FileReader();
     fileReader.iniParcels(&parcels, "encomendas.txt");
     fileReader.iniVans(&vans, "carrinhas.txt");
-    //Menu::start();
+    Menu::start();
 
     std::chrono::high_resolution_clock::time_point start2, end2;
     Scenario2 s2 = Scenario2(vans, parcels);

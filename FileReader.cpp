@@ -1,7 +1,5 @@
 #include "FileReader.h"
 
-#include <utility>
-
 FileReader::FileReader() = default;
 
 void FileReader::readFile(const string& txt) {
