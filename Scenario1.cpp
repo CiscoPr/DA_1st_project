@@ -1,7 +1,6 @@
-#include <fstream>
 #include <utility>
+#include <iostream>
 #include "Scenario1.h"
-#include "FileReader.h"
 
 Scenario1::Scenario1(std::vector<Van> v, std::vector<Parcel> p) : vans(std::move(v)), dels(std::move(p)) {}
 
@@ -36,10 +35,6 @@ void Scenario1::minOfVans() {
                 break;
             }
         }
-    }
-
-    for(auto itr4 = availableVans.begin() ; itr4 != availableVans.end() ; itr4++) {
-        std::cout << itr4->getMaxWeight() << " " << itr4->getMaxVol() << std::endl;
     }
 
     std::cout << "The minimum number of vans needed to deliver all packages is " << availableVans.size() << std::endl;
