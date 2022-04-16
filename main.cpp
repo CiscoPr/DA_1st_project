@@ -5,7 +5,8 @@
 #include <chrono>
 #include <iostream>
 
-int main() {/*
+int main() {
+
     vector<Parcel> parcels;
     vector<Courier> couriers;
     FileReader fileReader  = FileReader();
@@ -13,7 +14,6 @@ int main() {/*
     fileReader.iniCouriers(&couriers, "carrinhas.txt");
     Menu menu = Menu();
     menu.start();
-    */
 
     /*std::chrono::high_resolution_clock::time_point start, end;
 
@@ -29,9 +29,7 @@ int main() {/*
      */
 
     Scenario1 scenario1;
-    std::list<Van> result;
     result = scenario1.minOfVans();
-    std::cout << "The minimum number of vans needed is " << result.size() << std::endl();
 
     return 0;
 

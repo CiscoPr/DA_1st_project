@@ -45,5 +45,5 @@ void Scenario1::minOfVans() {
         }
     }
 
-    return availableVans;
+    std::cout << "The minimum number of vans needed to deliver all packages is " << availableVans.size() << std::endl();
 }
