@@ -6,10 +6,10 @@
 Scenario1::Scenario1(std::vector<Van> v, std::vector<Parcel> p) : vans(std::move(v)), dels(std::move(p)) {}
 
 /*
- * This function returns a list with
- * the minimum amount of vans of those
- * available to deliver all the deliveries
- * in a day if possible
+ * This function prints the minimum
+ * number of vans needed to deliver
+ * all the packages available for
+ * delivery in a certain day.
  *
  * Algorithm: Greedy
  * */
@@ -36,6 +36,10 @@ void Scenario1::minOfVans() {
                 break;
             }
         }
+    }
+
+    for(auto itr4 = availableVans.begin() ; itr4 != availableVans.end() ; itr4++) {
+        std::cout << itr4->getMaxWeight() << " " << itr4->getMaxVol() << std::endl;
     }
 
     std::cout << "The minimum number of vans needed to deliver all packages is " << availableVans.size() << std::endl;
