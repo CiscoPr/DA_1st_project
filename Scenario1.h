@@ -3,16 +3,16 @@
 
 #include <list>
 #include "Van.h"
-#include "Courier.h"
+#include "parcel.h"
 
 class Scenario1 {
 
 protected:
     std::list<Van> vans;
-    std::list<Courier> dels;
+    std::list<Parcel> dels;
 public:
     Scenario1();
-    std::list<Van> minOfVans();
+    void minOfVans();
 };
 
 

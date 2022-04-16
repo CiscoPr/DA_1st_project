@@ -4,11 +4,11 @@
 #include "Scenario1.h"
 #include <chrono>
 #include <iostream>
-
+#include "van.h"
 int main() {
 
     vector<Parcel> parcels;
-    vector<Courier> couriers;
+    vector<Van> couriers;
     FileReader fileReader  = FileReader();
     fileReader.iniParcels(&parcels, "encomendas.txt");
     fileReader.iniCouriers(&couriers, "carrinhas.txt");
@@ -29,7 +29,7 @@ int main() {
      */
 
     Scenario1 scenario1;
-    result = scenario1.minOfVans();
+    scenario1.minOfVans();
 
     return 0;
 

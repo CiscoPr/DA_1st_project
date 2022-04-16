@@ -100,6 +100,12 @@
 		<Unit filename="C:/Users/35191/DA_1st_project/Parcel.h">
 			<Option target="DA_project1"/>
 		</Unit>
+		<Unit filename="C:/Users/35191/DA_1st_project/Scenario1.cpp">
+			<Option target="DA_project1"/>
+		</Unit>
+		<Unit filename="C:/Users/35191/DA_1st_project/Scenario1.h">
+			<Option target="DA_project1"/>
+		</Unit>
 		<Unit filename="C:/Users/35191/DA_1st_project/Scenario3.cpp">
 			<Option target="DA_project1"/>
 		</Unit>

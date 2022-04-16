@@ -18,17 +18,17 @@ void Scenario1::minOfVans() {
 
     std::list<Van> availableVans;
 
-    for(std::vector<Van>::iterator itr1 = vans.begin() ; itr1 != vans.end() ; itr1++) {
+    for(auto itr1 = vans.begin() ; itr1 != vans.end() ; itr1++) {
 
         Van carrinha = vans.front();
 
-        for(std::vector<Courier>::iterator itr2 = dels.begin() ; itr2 != dels.end() ; itr2++) {
+        for(auto itr2 = dels.begin() ; itr2 != dels.end() ; itr2++) {
 
-            Courier encomenda = dels.front();
+            Parcel encomenda = dels.front();
 
-            if((carrinha.getMaxWeight() - encomenda.getMWgt()) > 0 || (carrinha.getMaxVol() - encomenda.getMVol()) > 0){
-                carrinha.setMaxWeight(carrinha.getMaxWeight() - encomenda.getMWgt());
-                carrinha.setMaxVol(carrinha.getMaxVol() - encomenda.getMVol());
+            if((carrinha.getMaxWeight() - encomenda.getWeight()) > 0 || (carrinha.getMaxVol() - encomenda.getVol()) > 0){
+                carrinha.setMaxWeight(carrinha.getMaxWeight() - encomenda.getWeight());
+                carrinha.setMaxVol(carrinha.getMaxVol() - encomenda.getVol());
                 dels.erase(itr2);
             } else {
                 vans.erase(itr1);
@@ -38,12 +38,12 @@ void Scenario1::minOfVans() {
     }
 
     if(dels.size() > 0) {
-        for(std::vector<Courier>::iterator itr3 = dels.begin() ;
+        for(auto itr3 = dels.begin() ;
             itr3 != dels.end();
             itr3++) {
             dels.erase(itr3);
         }
     }
 
-    std::cout << "The minimum number of vans needed to deliver all packages is " << availableVans.size() << std::endl();
+    std::cout << "The minimum number of vans needed to deliver all packages is " << availableVans.size() << std::endl;
 }
