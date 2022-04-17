@@ -200,6 +200,30 @@ Parcel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/Parcel.cpp.s
 .PHONY : Parcel.cpp.s
 
+Scenario2.obj: Scenario2.cpp.obj
+.PHONY : Scenario2.obj
+
+# target to build an object file
+Scenario2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/Scenario2.cpp.obj
+.PHONY : Scenario2.cpp.obj
+
+Scenario2.i: Scenario2.cpp.i
+.PHONY : Scenario2.i
+
+# target to preprocess a source file
+Scenario2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/Scenario2.cpp.i
+.PHONY : Scenario2.cpp.i
+
+Scenario2.s: Scenario2.cpp.s
+.PHONY : Scenario2.s
+
+# target to generate assembly for a file
+Scenario2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DA_project1.dir\build.make CMakeFiles/DA_project1.dir/Scenario2.cpp.s
+.PHONY : Scenario2.cpp.s
+
 Scenario3.obj: Scenario3.cpp.obj
 .PHONY : Scenario3.obj
 
@@ -290,6 +314,9 @@ help:
 	@echo ... Parcel.obj
 	@echo ... Parcel.i
 	@echo ... Parcel.s
+	@echo ... Scenario2.obj
+	@echo ... Scenario2.i
+	@echo ... Scenario2.s
 	@echo ... Scenario3.obj
 	@echo ... Scenario3.i
 	@echo ... Scenario3.s

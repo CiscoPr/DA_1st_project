@@ -31,7 +31,6 @@ void Menu::start() {
                 error = false;
                 break;
             case 2:
-
                 error = false;
                 break;
             case 3:

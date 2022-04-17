@@ -4,16 +4,22 @@ Parcel::Parcel(int vol, int weight, int cost, int duration) : vol(vol), weight(w
 
 int Parcel::getVol() const {return vol;}
 
-void Parcel::setVol(int vol) {Parcel::vol = vol;}
-
 int Parcel::getWeight() const {return weight;}
-
-void Parcel::setWeight(int weight) {Parcel::weight = weight;}
 
 int Parcel::getCost() const {return cost;}
 
-void Parcel::setCost(int cost) {Parcel::cost = cost;}
-
 int Parcel::getDuration() const {return duration;}
 
-void Parcel::setDuration(int duration) {Parcel::duration = duration;}
+bool Parcel::operator<(const Parcel &parcel) const {
+    if (cost == parcel.cost) return vol * weight < parcel.vol * parcel.weight;
+    return cost > parcel.cost;
+}
+
+bool Parcel::operator==(const Parcel &parcel) const {
+    return vol == parcel.vol && weight == parcel.weight && cost == parcel.cost && duration == parcel.duration;
+}
+
+ostream& operator<<(ostream& out, Parcel& p1) {
+    out << p1.getVol() << " " << p1.getWeight() << " " << p1.getCost() << " " << p1.getDuration() << endl;
+    return out;
+}

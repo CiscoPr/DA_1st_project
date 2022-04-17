@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/DA_project1.dir/Menu.cpp.obj.d"
   "CMakeFiles/DA_project1.dir/Parcel.cpp.obj"
   "CMakeFiles/DA_project1.dir/Parcel.cpp.obj.d"
+  "CMakeFiles/DA_project1.dir/Scenario2.cpp.obj"
+  "CMakeFiles/DA_project1.dir/Scenario2.cpp.obj.d"
   "CMakeFiles/DA_project1.dir/Scenario3.cpp.obj"
   "CMakeFiles/DA_project1.dir/Scenario3.cpp.obj.d"
   "CMakeFiles/DA_project1.dir/Van.cpp.obj"

@@ -1,7 +1,5 @@
 #include "FileReader.h"
 
-#include <utility>
-
 FileReader::FileReader() = default;
 
 void FileReader::readFile(const string& txt) {
@@ -40,7 +38,7 @@ void FileReader::iniParcels(vector<Parcel> *parcels, const string& txt) {
     }
 }
 
-void FileReader::iniCouriers(vector<Van> *vans, const string& txt) {
+void FileReader::iniVans(vector<Van> *vans, const string& txt) {
 
     temp.clear();
     readFile(txt);
