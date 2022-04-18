@@ -1,6 +1,5 @@
 #include "Menu.h"
 
-
 Menu::Menu() = default;
 
 void Menu::start(vector<Van> vans, vector<Parcel> parcels) {
@@ -27,10 +26,16 @@ void Menu::start(vector<Van> vans, vector<Parcel> parcels) {
             continue;
         }
         switch (answer) {
-            case 1:
-
+            case 1: {
+                chrono::high_resolution_clock::time_point start1, end1;
+                Scenario1 scenario1 = Scenario1(vans, parcels);
+                start1 = chrono::high_resolution_clock::now();
+                scenario1.minOfVans();
+                end1 = chrono::high_resolution_clock::now();
+                cout << '\n' << "total of " << chrono::duration_cast<chrono::milliseconds>(end1-start1).count() << " elapsed miliseconds";
                 error = false;
                 break;
+            }
             case 2: {
                 chrono::high_resolution_clock::time_point start2, end2;
                 Scenario2 s2 = Scenario2(vans, parcels);
@@ -43,14 +48,14 @@ void Menu::start(vector<Van> vans, vector<Parcel> parcels) {
                 break;
             }
             case 3: {
-                chrono::high_resolution_clock::time_point start, end;
+                chrono::high_resolution_clock::time_point start3, end3;
 
                 Scenario3 scenario3;
-                start = chrono::high_resolution_clock::now();
+                start3 = chrono::high_resolution_clock::now();
                 scenario3.getMeanTime();
-                end = chrono::high_resolution_clock::now();
+                end3 = chrono::high_resolution_clock::now();
 
-                cout << '\n' << "total of " << chrono::duration_cast<std::chrono::nanoseconds>(end-start).count() << " elapsed nanoseconds";
+                cout << '\n' << "total of " << chrono::duration_cast<std::chrono::nanoseconds>(end3-start3).count() << " elapsed nanoseconds";
                 error = false;
                 break;
             }

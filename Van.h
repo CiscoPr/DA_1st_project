@@ -13,7 +13,7 @@ class Van {
     int maxVol;                                   /**!< Max volume */
     int maxWeight;                                /**!< Max weight */
     int cost;                                     /**!< Cost of van's usage */
-    int profit{};                                   /**!< Balance of van's usage */
+    int profit;                                   /**!< Balance of van's usage */
     stack<Parcel> occupied;                       /**!< Parcel's inside van */
 
 public:
@@ -30,10 +30,20 @@ public:
      */
     int getMaxVol() const;
     /**
+     * Setter for max volume
+     * @param maxVol max volume
+     */
+    void setMaxVol(int maxVol);
+    /**
      * Getter for max weight
      * @return max weight
      */
     int getMaxWeight() const;
+    /**
+     * Setter for max weight
+     * @param maxWeight max weight
+     */
+    void setMaxWeight(int maxWeight);
     /**
      * Getter for cost
      * @return cost

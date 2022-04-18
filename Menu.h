@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <limits>
+#include "Scenario1.h"
 #include "Scenario2.h"
 #include "Scenario3.h"
 
