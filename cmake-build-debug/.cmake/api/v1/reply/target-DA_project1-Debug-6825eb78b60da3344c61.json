@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "DA_project1.exe"
-		},
-		{
-			"path" : "DA_project1.pdb"
+			"path" : "DA_project1"
 		}
 	],
 	"backtrace" : 1,
@@ -38,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -77,16 +74,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "DA_project1",
-	"nameOnDisk" : "DA_project1.exe",
+	"nameOnDisk" : "DA_project1",
 	"paths" : 
 	{
 		"build" : ".",

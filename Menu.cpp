@@ -1,8 +1,9 @@
 #include "Menu.h"
 
+
 Menu::Menu() = default;
 
-void Menu::start() {
+void Menu::start(vector<Van> vans, vector<Parcel> parcels) {
     unsigned short answer;
     bool error = true;
 
@@ -30,13 +31,29 @@ void Menu::start() {
 
                 error = false;
                 break;
-            case 2:
+            case 2: {
+                chrono::high_resolution_clock::time_point start2, end2;
+                Scenario2 s2 = Scenario2(vans, parcels);
+                start2 = chrono::high_resolution_clock::now();
+                s2.start();
+                s2.show();
+                end2 = chrono::high_resolution_clock::now();
+                cout << '\n' << "total of " << chrono::duration_cast<chrono::milliseconds>(end2-start2).count() << " elapsed miliseconds";
                 error = false;
                 break;
-            case 3:
+            }
+            case 3: {
+                chrono::high_resolution_clock::time_point start, end;
 
+                Scenario3 scenario3;
+                start = chrono::high_resolution_clock::now();
+                scenario3.getMeanTime();
+                end = chrono::high_resolution_clock::now();
+
+                cout << '\n' << "total of " << chrono::duration_cast<std::chrono::nanoseconds>(end-start).count() << " elapsed nanoseconds";
                 error = false;
                 break;
+            }
             case 0:
                 exit(0);
             default:

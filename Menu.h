@@ -19,5 +19,5 @@ public:
     /**
      * Starts user interface
      */
-    static void start();
+    static void start(vector<Van> vans, vector<Parcel> parcels);
 };
