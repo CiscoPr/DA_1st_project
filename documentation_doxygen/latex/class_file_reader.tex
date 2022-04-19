@@ -1,0 +1,75 @@
+\hypertarget{class_file_reader}{}\doxysection{File\+Reader Class Reference}
+\label{class_file_reader}\index{FileReader@{FileReader}}
+
+
+{\ttfamily \#include $<$File\+Reader.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}{File\+Reader}} ()
+\item 
+void \mbox{\hyperlink{class_file_reader_a726f32265b395917d5839870384856ed}{read\+File}} (const string \&txt)
+\item 
+void \mbox{\hyperlink{class_file_reader_a315efcaa19db26c2e782a15826262bf7}{ini\+Parcels}} (vector$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$ $\ast$parcels, const string \&txt)
+\item 
+void \mbox{\hyperlink{class_file_reader_a503cfa23a6e853ddeb3fe4dd58946b3e}{ini\+Vans}} (vector$<$ \mbox{\hyperlink{class_van}{Van}} $>$ $\ast$vans, const string \&txt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that reads files 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}\label{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}} 
+\index{FileReader@{FileReader}!FileReader@{FileReader}}
+\index{FileReader@{FileReader}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{FileReader()}{FileReader()}}
+{\footnotesize\ttfamily File\+Reader\+::\+File\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+!\texorpdfstring{$<$}{<} Vector used to save objects read in file Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file_reader_a315efcaa19db26c2e782a15826262bf7}\label{class_file_reader_a315efcaa19db26c2e782a15826262bf7}} 
+\index{FileReader@{FileReader}!iniParcels@{iniParcels}}
+\index{iniParcels@{iniParcels}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{iniParcels()}{iniParcels()}}
+{\footnotesize\ttfamily void File\+Reader\+::ini\+Parcels (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$ $\ast$}]{parcels,  }\item[{const string \&}]{txt }\end{DoxyParamCaption})}
+
+Saves all parcels to vector 
+\begin{DoxyParams}{Parameters}
+{\em parcels} & Pointer to vector containing all parcels \\
+\hline
+{\em txt} & File\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_file_reader_a503cfa23a6e853ddeb3fe4dd58946b3e}\label{class_file_reader_a503cfa23a6e853ddeb3fe4dd58946b3e}} 
+\index{FileReader@{FileReader}!iniVans@{iniVans}}
+\index{iniVans@{iniVans}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{iniVans()}{iniVans()}}
+{\footnotesize\ttfamily void File\+Reader\+::ini\+Vans (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_van}{Van}} $>$ $\ast$}]{vans,  }\item[{const string \&}]{txt }\end{DoxyParamCaption})}
+
+Saves all vans to vector 
+\begin{DoxyParams}{Parameters}
+{\em vans} & Pointer to vector containing all vans \\
+\hline
+{\em txt} & File\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_file_reader_a726f32265b395917d5839870384856ed}\label{class_file_reader_a726f32265b395917d5839870384856ed}} 
+\index{FileReader@{FileReader}!readFile@{readFile}}
+\index{readFile@{readFile}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily void File\+Reader\+::read\+File (\begin{DoxyParamCaption}\item[{const string \&}]{txt }\end{DoxyParamCaption})}
+
+Reads file and saves it in vector 
+\begin{DoxyParams}{Parameters}
+{\em txt} & File\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+File\+Reader.\+h\item 
+File\+Reader.\+cpp\end{DoxyCompactItemize}

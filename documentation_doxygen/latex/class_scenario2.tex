@@ -1,0 +1,81 @@
+\hypertarget{class_scenario2}{}\doxysection{Scenario2 Class Reference}
+\label{class_scenario2}\index{Scenario2@{Scenario2}}
+
+
+{\ttfamily \#include $<$Scenario2.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scenario2_aa4a3c21ab83c245642e598dd5addd6d2}{Scenario2}} (vector$<$ \mbox{\hyperlink{class_van}{Van}} $>$ vans, vector$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$ parcels)
+\item 
+void \mbox{\hyperlink{class_scenario2_a41d54df478fbb0191dcfce461138d65b}{start}} ()
+\item 
+bool \mbox{\hyperlink{class_scenario2_a8c442260b0feac63ce97cdf19c810db8}{check\+Van}} (\mbox{\hyperlink{class_van}{Van}} \&v, \mbox{\hyperlink{class_parcel}{Parcel}} \&p)
+\item 
+void \mbox{\hyperlink{class_scenario2_a7534c74e4849c8ae27b1266b930ead39}{check\+Balance}} ()
+\item 
+void \mbox{\hyperlink{class_scenario2_ac8c6bf6dc6f31dc9ecd4b35378610e56}{show}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for scenario 2 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scenario2_aa4a3c21ab83c245642e598dd5addd6d2}\label{class_scenario2_aa4a3c21ab83c245642e598dd5addd6d2}} 
+\index{Scenario2@{Scenario2}!Scenario2@{Scenario2}}
+\index{Scenario2@{Scenario2}!Scenario2@{Scenario2}}
+\doxysubsubsection{\texorpdfstring{Scenario2()}{Scenario2()}}
+{\footnotesize\ttfamily Scenario2\+::\+Scenario2 (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_van}{Van}} $>$}]{vans,  }\item[{vector$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$}]{parcels }\end{DoxyParamCaption})}
+
+!\texorpdfstring{$<$}{<} Set containing used vans Constructor 
+\begin{DoxyParams}{Parameters}
+{\em vans} & Set containing delivered parcels \\
+\hline
+{\em parcels} & Set containing used vans \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scenario2_a7534c74e4849c8ae27b1266b930ead39}\label{class_scenario2_a7534c74e4849c8ae27b1266b930ead39}} 
+\index{Scenario2@{Scenario2}!checkBalance@{checkBalance}}
+\index{checkBalance@{checkBalance}!Scenario2@{Scenario2}}
+\doxysubsubsection{\texorpdfstring{checkBalance()}{checkBalance()}}
+{\footnotesize\ttfamily void Scenario2\+::check\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if balance is positive and, if not, makes it so \mbox{\Hypertarget{class_scenario2_a8c442260b0feac63ce97cdf19c810db8}\label{class_scenario2_a8c442260b0feac63ce97cdf19c810db8}} 
+\index{Scenario2@{Scenario2}!checkVan@{checkVan}}
+\index{checkVan@{checkVan}!Scenario2@{Scenario2}}
+\doxysubsubsection{\texorpdfstring{checkVan()}{checkVan()}}
+{\footnotesize\ttfamily bool Scenario2\+::check\+Van (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_van}{Van}} \&}]{v,  }\item[{\mbox{\hyperlink{class_parcel}{Parcel}} \&}]{p }\end{DoxyParamCaption})}
+
+Checks if van is full, if not, places parcel in it 
+\begin{DoxyParams}{Parameters}
+{\em v} & \mbox{\hyperlink{class_van}{Van}} that is being analysed \\
+\hline
+{\em p} & \mbox{\hyperlink{class_parcel}{Parcel}} to be put in van \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false depending if it is possible or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scenario2_ac8c6bf6dc6f31dc9ecd4b35378610e56}\label{class_scenario2_ac8c6bf6dc6f31dc9ecd4b35378610e56}} 
+\index{Scenario2@{Scenario2}!show@{show}}
+\index{show@{show}!Scenario2@{Scenario2}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Scenario2\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Shows in terminal balance \mbox{\Hypertarget{class_scenario2_a41d54df478fbb0191dcfce461138d65b}\label{class_scenario2_a41d54df478fbb0191dcfce461138d65b}} 
+\index{Scenario2@{Scenario2}!start@{start}}
+\index{start@{start}!Scenario2@{Scenario2}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Scenario2\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts the algorithm for the scenario 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Scenario2.\+h\item 
+Scenario2.\+cpp\end{DoxyCompactItemize}

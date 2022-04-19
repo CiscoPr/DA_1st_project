@@ -1,0 +1,175 @@
+\hypertarget{class_van}{}\doxysection{Van Class Reference}
+\label{class_van}\index{Van@{Van}}
+
+
+{\ttfamily \#include $<$Van.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_van_ae6348a105e55efe1f3b7f5b342918da9}{Van}} (int max\+Vol, int max\+Weight, int cost)
+\item 
+int \mbox{\hyperlink{class_van_a40a17a8c4a0057b7e1e20b631f0c6a29}{get\+Max\+Vol}} () const
+\item 
+void \mbox{\hyperlink{class_van_a3615e5d2820f33499e8e775f3f7118b5}{set\+Max\+Vol}} (int max\+Vol)
+\item 
+int \mbox{\hyperlink{class_van_aed84b1fd65bbd074ac264e9d983d7a31}{get\+Max\+Weight}} () const
+\item 
+void \mbox{\hyperlink{class_van_ab4f5d2a79cb96d742aa84c8532d39d62}{set\+Max\+Weight}} (int max\+Weight)
+\item 
+int \mbox{\hyperlink{class_van_a169a9103322493bef615154688386627}{get\+Cost}} () const
+\item 
+stack$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$ \mbox{\hyperlink{class_van_ada11e59a6a259fae0f13b352e915bb5c}{get\+Occupied}} ()
+\item 
+int \mbox{\hyperlink{class_van_a3a36abf749649a87e363d0104fa21485}{get\+Profit}} () const
+\item 
+bool \mbox{\hyperlink{class_van_ac09c7a481dccf7b65735f67979f45eeb}{check\+Vol}} (int vol) const
+\item 
+bool \mbox{\hyperlink{class_van_a8a57377440e4de66804b9db26b6a8aef}{check\+Weight}} (int weight) const
+\item 
+void \mbox{\hyperlink{class_van_ad19fb3c544f2c7cc265aad23f5204be7}{occupy\+Space}} (\mbox{\hyperlink{class_parcel}{Parcel}} \&parcel)
+\item 
+bool \mbox{\hyperlink{class_van_a1da96e47e6b6aae744003be03ff7eed2}{operator$<$}} (const \mbox{\hyperlink{class_van}{Van}} \&van) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing delivery vans. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_van_ae6348a105e55efe1f3b7f5b342918da9}\label{class_van_ae6348a105e55efe1f3b7f5b342918da9}} 
+\index{Van@{Van}!Van@{Van}}
+\index{Van@{Van}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{Van()}{Van()}}
+{\footnotesize\ttfamily Van\+::\+Van (\begin{DoxyParamCaption}\item[{int}]{max\+Vol,  }\item[{int}]{max\+Weight,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+!\texorpdfstring{$<$}{<} \mbox{\hyperlink{class_parcel}{Parcel}}\textquotesingle{}s inside van Constructor 
+\begin{DoxyParams}{Parameters}
+{\em max\+Vol} & max supported volume \\
+\hline
+{\em max\+Weight} & max supported weight \\
+\hline
+{\em cost} & cost of using van \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_van_ac09c7a481dccf7b65735f67979f45eeb}\label{class_van_ac09c7a481dccf7b65735f67979f45eeb}} 
+\index{Van@{Van}!checkVol@{checkVol}}
+\index{checkVol@{checkVol}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{checkVol()}{checkVol()}}
+{\footnotesize\ttfamily bool Van\+::check\+Vol (\begin{DoxyParamCaption}\item[{int}]{vol }\end{DoxyParamCaption}) const}
+
+Checks if the max volume has been reached 
+\begin{DoxyParams}{Parameters}
+{\em vol} & volume of parcel to be put in van \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false depending on whether it\textquotesingle{}s possible or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_van_a8a57377440e4de66804b9db26b6a8aef}\label{class_van_a8a57377440e4de66804b9db26b6a8aef}} 
+\index{Van@{Van}!checkWeight@{checkWeight}}
+\index{checkWeight@{checkWeight}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{checkWeight()}{checkWeight()}}
+{\footnotesize\ttfamily bool Van\+::check\+Weight (\begin{DoxyParamCaption}\item[{int}]{weight }\end{DoxyParamCaption}) const}
+
+Checks if the max weight has been reached 
+\begin{DoxyParams}{Parameters}
+{\em weight} & weight of parcel to be put in van \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false depending on whether it\textquotesingle{}s possible or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_van_a169a9103322493bef615154688386627}\label{class_van_a169a9103322493bef615154688386627}} 
+\index{Van@{Van}!getCost@{getCost}}
+\index{getCost@{getCost}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Van\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for cost \begin{DoxyReturn}{Returns}
+cost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_van_a40a17a8c4a0057b7e1e20b631f0c6a29}\label{class_van_a40a17a8c4a0057b7e1e20b631f0c6a29}} 
+\index{Van@{Van}!getMaxVol@{getMaxVol}}
+\index{getMaxVol@{getMaxVol}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getMaxVol()}{getMaxVol()}}
+{\footnotesize\ttfamily int Van\+::get\+Max\+Vol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for max volume \begin{DoxyReturn}{Returns}
+max volume 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_van_aed84b1fd65bbd074ac264e9d983d7a31}\label{class_van_aed84b1fd65bbd074ac264e9d983d7a31}} 
+\index{Van@{Van}!getMaxWeight@{getMaxWeight}}
+\index{getMaxWeight@{getMaxWeight}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getMaxWeight()}{getMaxWeight()}}
+{\footnotesize\ttfamily int Van\+::get\+Max\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for max weight \begin{DoxyReturn}{Returns}
+max weight 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_van_ada11e59a6a259fae0f13b352e915bb5c}\label{class_van_ada11e59a6a259fae0f13b352e915bb5c}} 
+\index{Van@{Van}!getOccupied@{getOccupied}}
+\index{getOccupied@{getOccupied}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getOccupied()}{getOccupied()}}
+{\footnotesize\ttfamily stack$<$ \mbox{\hyperlink{class_parcel}{Parcel}} $>$ Van\+::get\+Occupied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for van\textquotesingle{}s occupation \begin{DoxyReturn}{Returns}
+van\textquotesingle{}s occupation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_van_a3a36abf749649a87e363d0104fa21485}\label{class_van_a3a36abf749649a87e363d0104fa21485}} 
+\index{Van@{Van}!getProfit@{getProfit}}
+\index{getProfit@{getProfit}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{getProfit()}{getProfit()}}
+{\footnotesize\ttfamily int Van\+::get\+Profit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for profit \begin{DoxyReturn}{Returns}
+profit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_van_ad19fb3c544f2c7cc265aad23f5204be7}\label{class_van_ad19fb3c544f2c7cc265aad23f5204be7}} 
+\index{Van@{Van}!occupySpace@{occupySpace}}
+\index{occupySpace@{occupySpace}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{occupySpace()}{occupySpace()}}
+{\footnotesize\ttfamily void Van\+::occupy\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_parcel}{Parcel}} \&}]{parcel }\end{DoxyParamCaption})}
+
+Puts parcel in van 
+\begin{DoxyParams}{Parameters}
+{\em parcel} & \mbox{\hyperlink{class_parcel}{Parcel}} to be put in van \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_van_a1da96e47e6b6aae744003be03ff7eed2}\label{class_van_a1da96e47e6b6aae744003be03ff7eed2}} 
+\index{Van@{Van}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Van\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_van}{Van}} \&}]{van }\end{DoxyParamCaption}) const}
+
+Overloaded operator \texorpdfstring{$<$}{<} \mbox{\Hypertarget{class_van_a3615e5d2820f33499e8e775f3f7118b5}\label{class_van_a3615e5d2820f33499e8e775f3f7118b5}} 
+\index{Van@{Van}!setMaxVol@{setMaxVol}}
+\index{setMaxVol@{setMaxVol}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{setMaxVol()}{setMaxVol()}}
+{\footnotesize\ttfamily void Van\+::set\+Max\+Vol (\begin{DoxyParamCaption}\item[{int}]{max\+Vol }\end{DoxyParamCaption})}
+
+Setter for max volume 
+\begin{DoxyParams}{Parameters}
+{\em max\+Vol} & max volume \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_van_ab4f5d2a79cb96d742aa84c8532d39d62}\label{class_van_ab4f5d2a79cb96d742aa84c8532d39d62}} 
+\index{Van@{Van}!setMaxWeight@{setMaxWeight}}
+\index{setMaxWeight@{setMaxWeight}!Van@{Van}}
+\doxysubsubsection{\texorpdfstring{setMaxWeight()}{setMaxWeight()}}
+{\footnotesize\ttfamily void Van\+::set\+Max\+Weight (\begin{DoxyParamCaption}\item[{int}]{max\+Weight }\end{DoxyParamCaption})}
+
+Setter for max weight 
+\begin{DoxyParams}{Parameters}
+{\em max\+Weight} & max weight \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Van.\+h\item 
+Van.\+cpp\end{DoxyCompactItemize}

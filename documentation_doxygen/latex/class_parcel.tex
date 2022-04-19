@@ -1,0 +1,103 @@
+\hypertarget{class_parcel}{}\doxysection{Parcel Class Reference}
+\label{class_parcel}\index{Parcel@{Parcel}}
+
+
+{\ttfamily \#include $<$Parcel.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_parcel_ad5dd71193ee75ce0a929de404291c0d7}{Parcel}} (int vol, int weight, int cost, int duration)
+\item 
+int \mbox{\hyperlink{class_parcel_acba55bc0f240856fba18aecbfc74d324}{get\+Vol}} () const
+\item 
+int \mbox{\hyperlink{class_parcel_a707cb3005737bc96e77e7a2d38e1f87b}{get\+Weight}} () const
+\item 
+int \mbox{\hyperlink{class_parcel_aa88d89f56b951cdbba850f4afdab2455}{get\+Cost}} () const
+\item 
+int \mbox{\hyperlink{class_parcel_adb230c625217c247e951eb5a018fdaf9}{get\+Duration}} () const
+\item 
+bool \mbox{\hyperlink{class_parcel_aa62ab043bfc84c4d8e2775ab1f0fa696}{operator$<$}} (const \mbox{\hyperlink{class_parcel}{Parcel}} \&parcel) const
+\item 
+bool \mbox{\hyperlink{class_parcel_a0e30c844bf9733150e90b2df38ad788d}{operator==}} (const \mbox{\hyperlink{class_parcel}{Parcel}} \&parcel) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing parcels. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_parcel_ad5dd71193ee75ce0a929de404291c0d7}\label{class_parcel_ad5dd71193ee75ce0a929de404291c0d7}} 
+\index{Parcel@{Parcel}!Parcel@{Parcel}}
+\index{Parcel@{Parcel}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{Parcel()}{Parcel()}}
+{\footnotesize\ttfamily Parcel\+::\+Parcel (\begin{DoxyParamCaption}\item[{int}]{vol,  }\item[{int}]{weight,  }\item[{int}]{cost,  }\item[{int}]{duration }\end{DoxyParamCaption})}
+
+!\texorpdfstring{$<$}{<} Maximum duration delivery must be delivered Constructor 
+\begin{DoxyParams}{Parameters}
+{\em vol} & Volume \\
+\hline
+{\em weight} & Weight \\
+\hline
+{\em cost} & Reward of delivering parcel \\
+\hline
+{\em duration} & Maximum duration delivery must be delivered \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_parcel_aa88d89f56b951cdbba850f4afdab2455}\label{class_parcel_aa88d89f56b951cdbba850f4afdab2455}} 
+\index{Parcel@{Parcel}!getCost@{getCost}}
+\index{getCost@{getCost}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Parcel\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for cost \begin{DoxyReturn}{Returns}
+cost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parcel_adb230c625217c247e951eb5a018fdaf9}\label{class_parcel_adb230c625217c247e951eb5a018fdaf9}} 
+\index{Parcel@{Parcel}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily int Parcel\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for duration \begin{DoxyReturn}{Returns}
+duration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parcel_acba55bc0f240856fba18aecbfc74d324}\label{class_parcel_acba55bc0f240856fba18aecbfc74d324}} 
+\index{Parcel@{Parcel}!getVol@{getVol}}
+\index{getVol@{getVol}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{getVol()}{getVol()}}
+{\footnotesize\ttfamily int Parcel\+::get\+Vol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for volume \begin{DoxyReturn}{Returns}
+volume 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parcel_a707cb3005737bc96e77e7a2d38e1f87b}\label{class_parcel_a707cb3005737bc96e77e7a2d38e1f87b}} 
+\index{Parcel@{Parcel}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily int Parcel\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for weight \begin{DoxyReturn}{Returns}
+weight 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parcel_aa62ab043bfc84c4d8e2775ab1f0fa696}\label{class_parcel_aa62ab043bfc84c4d8e2775ab1f0fa696}} 
+\index{Parcel@{Parcel}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Parcel\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_parcel}{Parcel}} \&}]{parcel }\end{DoxyParamCaption}) const}
+
+Overloaded operator \texorpdfstring{$<$}{<} \mbox{\Hypertarget{class_parcel_a0e30c844bf9733150e90b2df38ad788d}\label{class_parcel_a0e30c844bf9733150e90b2df38ad788d}} 
+\index{Parcel@{Parcel}!operator==@{operator==}}
+\index{operator==@{operator==}!Parcel@{Parcel}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Parcel\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_parcel}{Parcel}} \&}]{parcel }\end{DoxyParamCaption}) const}
+
+Overloaded operator == 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Parcel.\+h\item 
+Parcel.\+cpp\end{DoxyCompactItemize}

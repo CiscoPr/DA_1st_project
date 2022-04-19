@@ -1,0 +1,94 @@
+\hypertarget{class_scenario3}{}\doxysection{Scenario3 Class Reference}
+\label{class_scenario3}\index{Scenario3@{Scenario3}}
+
+
+{\ttfamily \#include $<$Scenario3.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scenario3_a34c23d46f2d3885edc37674426d5592d}{Scenario3}} ()
+\item 
+void \mbox{\hyperlink{class_scenario3_a4fd14e033e5f4d3bffb23484c52e3cfc}{merge}} (int array\mbox{[}$\,$\mbox{]}, int p, int q, int r)
+\item 
+void \mbox{\hyperlink{class_scenario3_aa6c03b77ad1b5ff527bd267a74cbe7c0}{merge\+\_\+sort}} (int array\mbox{[}$\,$\mbox{]}, int p, int r)
+\item 
+float \mbox{\hyperlink{class_scenario3_acdf4a45acacb97fb06d5ab0b3af9c105}{get\+Mean\+Time}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scenario3_a4f7a801f07be2761cf2f5a7eac79d7ca}\label{class_scenario3_a4f7a801f07be2761cf2f5a7eac79d7ca}} 
+std\+::list$<$ int $>$ {\bfseries possible\+\_\+timers}
+\item 
+\mbox{\Hypertarget{class_scenario3_a5804c86a21a5dcbf686301081fe86a4f}\label{class_scenario3_a5804c86a21a5dcbf686301081fe86a4f}} 
+std\+::list$<$ std\+::list$<$ float $>$ $>$ {\bfseries possible\+\_\+combinations\+\_\+list}
+\item 
+\mbox{\Hypertarget{class_scenario3_a5126464f09ad9e6a19d3c55f1746109d}\label{class_scenario3_a5126464f09ad9e6a19d3c55f1746109d}} 
+std\+::multimap$<$ int, int $>$ {\bfseries mapping\+\_\+deliveries}
+\item 
+\mbox{\Hypertarget{class_scenario3_a9226bd7efb35381ce78a582f94329d2f}\label{class_scenario3_a9226bd7efb35381ce78a582f94329d2f}} 
+int {\bfseries timer\+\_\+array} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class of scenario 3 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scenario3_a34c23d46f2d3885edc37674426d5592d}\label{class_scenario3_a34c23d46f2d3885edc37674426d5592d}} 
+\index{Scenario3@{Scenario3}!Scenario3@{Scenario3}}
+\index{Scenario3@{Scenario3}!Scenario3@{Scenario3}}
+\doxysubsubsection{\texorpdfstring{Scenario3()}{Scenario3()}}
+{\footnotesize\ttfamily Scenario3\+::\+Scenario3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scenario3_acdf4a45acacb97fb06d5ab0b3af9c105}\label{class_scenario3_acdf4a45acacb97fb06d5ab0b3af9c105}} 
+\index{Scenario3@{Scenario3}!getMeanTime@{getMeanTime}}
+\index{getMeanTime@{getMeanTime}!Scenario3@{Scenario3}}
+\doxysubsubsection{\texorpdfstring{getMeanTime()}{getMeanTime()}}
+{\footnotesize\ttfamily float Scenario3\+::get\+Mean\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a list of all the deliveries with less than 8h of delivery time, transforms it into an array and applies merge\+\_\+sort to it (greedy implementation and divide and conquer) \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scenario3_a4fd14e033e5f4d3bffb23484c52e3cfc}\label{class_scenario3_a4fd14e033e5f4d3bffb23484c52e3cfc}} 
+\index{Scenario3@{Scenario3}!merge@{merge}}
+\index{merge@{merge}!Scenario3@{Scenario3}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily void Scenario3\+::merge (\begin{DoxyParamCaption}\item[{int}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{p,  }\item[{int}]{q,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+Merge-\/\+Sort (divide and conquer) 
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em p} & \\
+\hline
+{\em q} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scenario3_aa6c03b77ad1b5ff527bd267a74cbe7c0}\label{class_scenario3_aa6c03b77ad1b5ff527bd267a74cbe7c0}} 
+\index{Scenario3@{Scenario3}!merge\_sort@{merge\_sort}}
+\index{merge\_sort@{merge\_sort}!Scenario3@{Scenario3}}
+\doxysubsubsection{\texorpdfstring{merge\_sort()}{merge\_sort()}}
+{\footnotesize\ttfamily void Scenario3\+::merge\+\_\+sort (\begin{DoxyParamCaption}\item[{int}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{p,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & \\
+\hline
+{\em p} & \\
+\hline
+{\em r} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Scenario3.\+h\item 
+Scenario3.\+cpp\end{DoxyCompactItemize}

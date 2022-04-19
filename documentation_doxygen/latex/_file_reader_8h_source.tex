@@ -1,0 +1,25 @@
+\hypertarget{_file_reader_8h_source}{}\doxysection{File\+Reader.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <climits>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Parcel.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Van.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_reader}{FileReader}} \{}
+\DoxyCodeLine{17     vector<string> temp;            }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}{FileReader}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_reader_a726f32265b395917d5839870384856ed}{readFile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& txt);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_reader_a315efcaa19db26c2e782a15826262bf7}{iniParcels}}(vector<Parcel> *parcels, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& txt);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_reader_a503cfa23a6e853ddeb3fe4dd58946b3e}{iniVans}}(vector<Van> *vans, \textcolor{keyword}{const} \textcolor{keywordtype}{string}\& txt);}
+\DoxyCodeLine{41 \};}
+
+\end{DoxyCode}

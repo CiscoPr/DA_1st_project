@@ -1,0 +1,33 @@
+\hypertarget{_van_8h_source}{}\doxysection{Van.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Parcel.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_van}{Van}} \{}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} maxVol;                                   }
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} maxWeight;                                }
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} cost;                                     }
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} profit;                                   }
+\DoxyCodeLine{17     stack<Parcel> occupied;                       }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_van_ae6348a105e55efe1f3b7f5b342918da9}{Van}}(\textcolor{keywordtype}{int} maxVol, \textcolor{keywordtype}{int} maxWeight, \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_van_a40a17a8c4a0057b7e1e20b631f0c6a29}{getMaxVol}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_van_a3615e5d2820f33499e8e775f3f7118b5}{setMaxVol}}(\textcolor{keywordtype}{int} maxVol);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_van_aed84b1fd65bbd074ac264e9d983d7a31}{getMaxWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_van_ab4f5d2a79cb96d742aa84c8532d39d62}{setMaxWeight}}(\textcolor{keywordtype}{int} maxWeight);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_van_a169a9103322493bef615154688386627}{getCost}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56     stack<Parcel> \mbox{\hyperlink{class_van_ada11e59a6a259fae0f13b352e915bb5c}{getOccupied}}();}
+\DoxyCodeLine{61     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_van_a3a36abf749649a87e363d0104fa21485}{getProfit}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_van_ac09c7a481dccf7b65735f67979f45eeb}{checkVol}}(\textcolor{keywordtype}{int} vol) \textcolor{keyword}{const};}
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_van_a8a57377440e4de66804b9db26b6a8aef}{checkWeight}}(\textcolor{keywordtype}{int} weight) \textcolor{keyword}{const};}
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_van_ad19fb3c544f2c7cc265aad23f5204be7}{occupySpace}}(\mbox{\hyperlink{class_parcel}{Parcel}}\& parcel);}
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_van_a1da96e47e6b6aae744003be03ff7eed2}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_van}{Van}}\& van) \textcolor{keyword}{const};}
+\DoxyCodeLine{83 \};}
+
+\end{DoxyCode}
