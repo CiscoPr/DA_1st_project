@@ -103,13 +103,13 @@ float Scenario3::getMeanTime() {
         if(total + it <= max_time){
             total += it;
             counter ++;
-            std::cout << it << " ";
+            //std::cout << it << " ";
         }
         else
             break;
     }
     float mean_time = total/counter;
-    std::cout << "the total time spent by the express delivery truck is " << total << " seconds, which is about " << total / 60 << " minutes, or " << total / 60 / 60 << " hours\nThe mean time is about " << mean_time << " seconds or " << mean_time/60 << " minutes." ;
-    std::cout << "\nreturning " << size -counter << " deliveries to the provider\n";
+    std::cout << "\nthe total time spent by the express delivery truck is " << total << " seconds, which is about " << total / 60 << " minutes, or " << total / 60 / 60 << " hours\nThe mean time is about " << mean_time << " seconds or " << mean_time/60 << " minutes." ;
+    std::cout << "\nreturning " << size - counter << " deliveries to the provider\n";
     return mean_time;
 }
