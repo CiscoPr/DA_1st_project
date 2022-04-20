@@ -16,9 +16,11 @@ void Scenario2::start() {
             vans.erase(vans.begin());
         }
     }
-    for (auto x : used) {
-        for (auto it = parcels.begin(); it != parcels.end(); it++) {
-            if (checkVan(vans[0], *it)) it = parcels.begin();
+    if (!parcels.empty()) {
+        for (auto x: used) {
+            for (auto it = parcels.begin(); it != parcels.end(); it++) {
+                if (checkVan(vans[0], *it)) it = parcels.begin();
+            }
         }
     }
     checkBalance();
