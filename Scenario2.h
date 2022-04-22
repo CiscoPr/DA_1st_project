@@ -15,8 +15,8 @@ class Scenario2 {
     vector<Van> vans;                    /**!< Vector containing all vans */
     vector<Parcel> parcels;              /**!< Vector containing all parcels */
     int balance;                         /**!< Balance of the deliveries of the day */
-    set<Parcel> delivered;               /**!< Set containing delivered parcels */
-    set<Van> used;                       /**!< Set containing used vans */
+    set<Parcel> delivered;            /**!< Set containing delivered parcels */
+    vector<Van> used;                    /**!< Set containing used vans */
 
 public:
     /**

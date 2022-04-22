@@ -10,17 +10,16 @@ void Scenario2::start() {
     sort(parcels.begin(), parcels.end());
     sort(vans.begin(), vans.end());
 
+    balance -= vans[0].getCost();
+    used.push_back(vans[0]);
     while (!parcels.empty() && !vans.empty()) {
-        if (used.insert(vans[0]).second) balance -= vans[0].getCost();
         if (!checkVan(vans[0], parcels[0])) {
-            vans.erase(vans.begin());
-        }
-    }
-    if (!parcels.empty()) {
-        for (auto x: used) {
             for (auto it = parcels.begin(); it != parcels.end(); it++) {
                 if (checkVan(vans[0], *it)) it = parcels.begin();
             }
+            vans.erase(vans.begin());
+            used.push_back(vans[0]);
+            balance -= vans[0].getCost();
         }
     }
     checkBalance();
@@ -38,18 +37,23 @@ bool Scenario2::checkVan(Van& van, Parcel& parcel) {
 }
 
 void Scenario2::checkBalance() {
-    vans.clear();
 
     if (balance >= 0) return;
+
+    vans.clear();
 
     for (const auto& x : used) vans.push_back(x);
     sort(vans.begin(), vans.end(), [] (const Van& v1, const Van& v2) {
         return v1.getProfit() < v2.getProfit();
     });
 
-    while (balance < 0 || vans.empty()) {
+    while (balance < 0 && !vans.empty()) {
         balance -= vans[0].getProfit();
         vans.erase(vans.begin());
+    }
+    if (balance < 0 ) {
+        used.clear();
+        balance = 0;
     }
 }
 
