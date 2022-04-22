@@ -14,7 +14,6 @@ class Van {
     int maxWeight;                                /**!< Max weight */
     int cost;                                     /**!< Cost of van's usage */
     int profit;                                   /**!< Balance of van's usage */
-    stack<Parcel> occupied;                       /**!< Parcel's inside van */
 
 public:
     /**
@@ -49,11 +48,6 @@ public:
      * @return cost
      */
     int getCost() const;
-    /**
-     * Getter for van's occupation
-     * @return van's occupation
-     */
-    stack<Parcel> getOccupied();
     /**
      * Getter for profit
      * @return profit

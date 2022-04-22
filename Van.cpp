@@ -14,8 +14,6 @@ void Van::setMaxWeight(int maxWeight) {Van::maxWeight = maxWeight;}
 
 int Van::getCost() const {return cost;}
 
-stack<Parcel> Van::getOccupied() {return occupied;}
-
 int Van::getProfit() const {return profit;}
 
 bool Van::checkVol(int vol) const { return maxVol > vol;}
@@ -25,7 +23,6 @@ bool Van::checkWeight(int weight) const { return maxWeight > weight;}
 void Van::occupySpace(Parcel& parcel) {
     maxVol -= parcel.getVol();
     maxWeight -= parcel.getWeight();
-    occupied.push(parcel);
     profit += parcel.getCost();
 }
 
