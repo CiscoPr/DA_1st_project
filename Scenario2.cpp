@@ -47,12 +47,8 @@ void Scenario2::checkBalance() {
         return v1.getProfit() < v2.getProfit();
     });
 
-    while (balance < 0) {
-        while (!vans[0].getOccupied().empty()) {
-            balance -= vans[0].getOccupied().top().getCost();
-            vans[0].getOccupied().pop();
-        }
-        balance += vans[0].getCost();
+    while (balance < 0 || vans.empty()) {
+        balance -= vans[0].getProfit();
         vans.erase(vans.begin());
     }
 }
