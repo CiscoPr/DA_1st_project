@@ -5,6 +5,7 @@ Scenario1::Scenario1(std::vector<Van> v, std::vector<Parcel> p) : vans(std::move
 void Scenario1::minOfVans() {
 
     std::vector<Van> availableVans;
+    int numberOfDels = dels.size();
 
     for(auto itr1 = vans.begin() ; itr1 != vans.end() ; itr1++) {
 
@@ -18,7 +19,10 @@ void Scenario1::minOfVans() {
                 carrinha.setMaxWeight(carrinha.getMaxWeight() - encomenda.getWeight());
                 carrinha.setMaxVol(carrinha.getMaxVol() - encomenda.getVol());
                 dels.erase(itr2);
-            } else {
+                if (dels.empty()) {
+                    availableVans.push_back(carrinha);
+                }
+            }  else {
                 itr2++;
                 availableVans.push_back(carrinha);
                 break;
